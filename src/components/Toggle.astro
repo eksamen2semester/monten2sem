@@ -1,0 +1,51 @@
+<div class="toggle-container">
+    <span class="toggle-text left">cafe</span>
+    <div class="toggle"></div>
+    <span class="toggle-text right">bar</span>
+</div>
+
+<style>
+
+.toggle-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.toggle-text {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--sec-color);
+}
+
+
+.toggle{
+    position: relative;
+    height: 45px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: var(--third-color);
+    cursor: pointer;
+   
+}
+
+.toggle::before{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color:var(--four-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle.active::before{
+    background-color: var(--primary-color);
+    left: calc(100% - 40px - 7px);
+}
+
+</style>

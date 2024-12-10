@@ -1,0 +1,147 @@
+<nav class="navbar">
+    <a href="index.html" class="nav-logo">MØNTEN</a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="menu.html" class="nav-link">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Booking</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Om Os</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Events</a>
+      </li>
+    </ul>
+   
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+
+  <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 70%;
+    font-family: "Abel", sans-serif;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  /* Almindelig styling på header og .navbar */
+  /* step 3 */
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Hamburgeren laves gøres usynlig */
+  /* step 4 */
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--sec-color)
+  }
+  /* ... go gøres usynlig */
+  /* step 5 */
+  .hamburger {
+    display: none;
+  }
+  
+  /* Styling af menuen */
+  /* step 6 */
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-left: 5rem;
+  }
+  
+  .nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+  }
+  
+  .nav-link:hover {
+    color: #482ff7;
+  }
+  
+  .nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--sec-color);
+    font-style: italic;
+  }
+  
+  /* step 7 */
+
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 6.5rem;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.5s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      height: 100vh;
+      z-index: 1;
+    }
+  
+    .nav-menu.active {
+      left: 0;
+    }
+  
+    .nav-item {
+      margin: 2.5rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      translate: 0 8px;
+      rotate: 45deg;
+      
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      translate: 0 -8px;
+      rotate: -45deg;
+      
+    }
+  
+  
+  </style>
