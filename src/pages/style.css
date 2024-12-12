@@ -27,6 +27,7 @@ body {
 p {
   font-family: Orator Std;
   line-height: 3ch;
+  font-size: 14px;
 }
 
 @font-face {

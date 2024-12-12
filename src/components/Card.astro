@@ -1,5 +1,5 @@
 ---
-
+const title = Astro.props.title;
 ---
 
 <div class="card">
@@ -7,7 +7,7 @@
     <div class="day">09</div>
     <div class="month">Dec</div>
   </div>
-  <div class="title">Quiz Aften</div>
+  <div class="title"><h3>{title}</h3></div>
 </div>
 
 <style>
@@ -45,5 +45,9 @@
     padding: 10px;
     font-size: 50px;
     font-weight: bold;
+  }
+
+  h3 {
+    font-size: 5vh;
   }
 </style>

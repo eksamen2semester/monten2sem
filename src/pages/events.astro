@@ -16,19 +16,19 @@ import Card from "../components/Card.astro";
   <Form />
   <div class="events">
     <div class="event">
-      <Card />
+      <Card title="QUIZ AFTEN" />
       <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
     </div>
     <div class="event">
-      <Card />
+      <Card title="Drik& fold" />
       <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
     </div>
     <div class="event">
-      <Card />
+      <Card title="STRIK &DRIK" />
       <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
     </div>
     <div class="event">
-      <Card />
+      <Card title="QUIZ AFTEN" />
       <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
     </div>
   </div>
@@ -49,10 +49,12 @@ import Card from "../components/Card.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
+    align-items: baseline;
   }
 
-  p {
-    font-family: Orator Std;
+  h1 {
+    place-self: center;
+    color: rgba(255, 2, 10, 1);
   }
 
   @media (min-width: 701px) {
