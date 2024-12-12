@@ -25,6 +25,25 @@ import Footer from "../components/Footer.astro";
       <img class="montmand" src="../img/montmand.png" alt="montmand" />
     </div>
   </section>
+  <div class="farvebane">
+    <p class="kaffe">KAFFE & VASKETID</p>
+    <p class="kaffe">49,-</p>
+  </div>
+  <h2>PRISLISTE</h2>
+  <section>
+    <div class="grid_1-1">
+      <div class="col2">
+        <p>VASKEMASKINE 1 50,-</p>
+        <p>VASKEMASKINE 2 50,-</p>
+        <p>VASKEMASKINE 3 50,-</p>
+      </div>
+      <div class="col2">
+        <p>VASKEMASKINE 1 50,-</p>
+        <p>VASKEMASKINE 2 50,-</p>
+        <p>VASKEMASKINE 3 50,-</p>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -54,6 +73,25 @@ import Footer from "../components/Footer.astro";
     padding-left: 20%;
   }
 
+  .farvebane {
+    background-color: #340000;
+    margin-top: 10%;
+    padding: 4%;
+  }
+
+  .kaffe {
+    color: #f8f6e9;
+    place-self: center;
+    margin-left: -20%;
+    display: block;
+    max-width: 65ch;
+    line-height: 5ch;
+    font-size: 150%;
+  }
+
+  .col2 {
+  }
+
   @font-face {
     font-family: "rubik-doodle";
     src: url(../RubikDoodleShadow-Regular.ttf);
@@ -62,7 +100,8 @@ import Footer from "../components/Footer.astro";
   h2 {
     padding-left: 10%;
     font-family: rubik-doodle;
-    font-size: 300%;
+    font-size: 200%;
+    margin-top: 10%;
   }
   .overskrift {
     display: flex;
@@ -70,7 +109,36 @@ import Footer from "../components/Footer.astro";
     margin: 10%;
     font-family: rubik-doodle;
     color: #ff020a;
-    font-size: 300%;
+    font-size: 250%;
     margin-top: -10%;
+  }
+
+  @media (max-width: 600px) {
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1em;
+    }
+
+    .overskrift {
+      font-size: 150%;
+    }
+
+    h2 {
+      font-size: 150%;
+      margin-bottom: 10%;
+    }
+
+    p {
+      padding-left: 10%;
+    }
+
+    img {
+      max-width: 80%;
+    }
+
+    .col2 {
+      text-align: center;
+    }
   }
 </style>
