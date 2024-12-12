@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+import Footer from "../components/Footer.astro";
+import Form from "../components/Form.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout>
+  <!-- <Header /> -->
+  <div class="billede">
+    <img src="../img/skol.png" alt="tegning af montvask" />
+  </div>
+  <h1>EVENTS</h1>
+  <Form />
+  <div class="events">
+    <div class="event">
+      <Card />
+      <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
+    </div>
+    <div class="event">
+      <Card />
+      <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
+    </div>
+    <div class="event">
+      <Card />
+      <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
+    </div>
+    <div class="event">
+      <Card />
+      <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  img {
+    max-width: 100%;
+  }
+  .billede {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+  }
+
+  .event {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  p {
+    font-family: Orator Std;
+  }
+
+  @media (min-width: 701px) {
+    .events {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .event {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      max-width: 700px;
+    }
+  }
+</style>
