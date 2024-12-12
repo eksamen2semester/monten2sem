@@ -37,10 +37,15 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: rubik-doodle;
 }
 
 h1 {
   font-size: 11vh;
+}
+
+a {
+  color: #2f0002;
 }
