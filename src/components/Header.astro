@@ -5,7 +5,9 @@ import Burgermenu from "./Burgermenu.astro";
 
 <header>
   <div class="header">
-    <img src="../img/logo.png" alt="logo" />
+    <div class="logo">
+      <img src="../img/logo.png" alt="logo" />
+    </div>
     <Reservation />
     <Burgermenu />
   </div>
@@ -16,5 +18,9 @@ import Burgermenu from "./Burgermenu.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .logo img {
+    max-width: 80%;
   }
 </style>

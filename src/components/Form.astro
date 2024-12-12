@@ -10,15 +10,17 @@
   </div>
 
   <div class="søg">
-    <input id="søg" type="text" placeholder="Søg...            🔍" />
+    <input id="søg" type="text" placeholder="Søg...           🔍" />
   </div>
 </div>
 
 <style>
-  .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  @media (min-width: 700px) {
+    .flex {
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+    }
   }
   input {
     font-family: Orator std;
@@ -34,7 +36,7 @@
     display: flex;
     align-items: center;
     background-color: #2f0002;
-    width: 270px;
+    max-width: 280px;
     border-radius: 30px;
     overflow: hidden;
     margin: 10px;
