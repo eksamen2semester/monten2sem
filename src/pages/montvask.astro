@@ -2,12 +2,12 @@
 import "../pages/style.css";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Burgermenu from "../components/Burgermenu.astro";
-import Footer from "../components/Footer.astro";
 import Reservation from "../components/Reservation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
+  <Header />
   <div class="montvask">
     <img src="../img/montvask.png" alt="montvask" />
   </div>
@@ -67,6 +67,7 @@ import Reservation from "../components/Reservation.astro";
       </div>
     </div>
   </section>
+  <Footer />
 
   <style>
     img {
@@ -112,11 +113,11 @@ import Reservation from "../components/Reservation.astro";
       display: block;
       max-width: 65ch;
       line-height: 2ch;
-      font-size: 150%;
+      font-size: 200%;
     }
 
     .vask {
-      font-size: 140%;
+      font-size: 200%;
       place-self: center;
       line-height: 2ch;
       margin-top: 10%;
@@ -128,7 +129,7 @@ import Reservation from "../components/Reservation.astro";
       place-self: center;
       margin-top: 10%;
       line-height: 2ch;
-      font-size: 140%;
+      font-size: 200%;
       color: #340000;
     }
 
@@ -142,6 +143,14 @@ import Reservation from "../components/Reservation.astro";
       border-radius: 3%;
     }
 
+    .col2 {
+      padding-right: 32%;
+    }
+
+    .col3 {
+      padding-right: 32%;
+    }
+
     @font-face {
       font-family: "rubik-doodle";
       src: url(../RubikDoodleShadow-Regular.ttf);
@@ -150,13 +159,13 @@ import Reservation from "../components/Reservation.astro";
     h2 {
       padding-left: 12%;
       font-family: rubik-doodle;
-      font-size: 250%;
+      font-size: 300%;
       margin-top: 10%;
       margin-bottom: 2%;
     }
 
     h3 {
-      font-size: 230%;
+      font-size: 300%;
       padding-left: 12%;
       margin-top: 7%;
       margin-bottom: 3%;
@@ -179,11 +188,11 @@ import Reservation from "../components/Reservation.astro";
       }
 
       h1 {
-        font-size: 120%;
+        font-size: 180%;
       }
 
       h2 {
-        font-size: 180%;
+        font-size: 240%;
         margin-bottom: 5%;
         padding-left: 7%;
       }
@@ -191,6 +200,7 @@ import Reservation from "../components/Reservation.astro";
       p {
         padding-left: 7%;
         margin-bottom: 5%;
+        font-size: 110%;
       }
 
       img {
@@ -202,38 +212,42 @@ import Reservation from "../components/Reservation.astro";
         display: block;
         place-self: center;
         padding-right: 7%;
+        margin-top: 7%;
+        margin-bottom: 7%;
       }
 
       .kaffe {
         margin-left: -10%;
-        font-size: 110%;
+        font-size: 150%;
         line-height: 2ch;
         margin-top: 5%;
       }
 
       .vask {
-        line-height: 2ch;
+        line-height: 5ch;
         place-self: center;
-        font-size: 120%;
+        font-size: 150%;
         margin-top: 5%;
+        padding-left: 43%;
       }
 
       .spg {
-        line-height: 3ch;
+        line-height: 1ch;
         place-self: center;
-        font-size: 100%;
+        font-size: 150%;
+        padding-left: 43%;
       }
 
       h3 {
-        font-size: 190%;
+        font-size: 250%;
         margin-bottom: 5%;
         padding-left: 7%;
-        margin-top: 15%;
+        margin-top: 10%;
       }
 
       .knap {
-        margin-bottom: 5%;
-        padding-left: 43%;
+        margin-bottom: 2%;
+        padding-left: 8%;
         margin-top: 5%;
       }
     }
