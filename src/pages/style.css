@@ -1,1 +1,20 @@
-/*Goddag*/
+:root{
+    --primary-color: rgba(248, 246, 233, 1);
+    --sec-color:rgba(255, 2, 10, 1);
+    --third-color: rgb(219, 214, 214);
+    --four-color: rgba(255, 2, 10, 1);
+}
+
+.dark-theme{
+    --primary-color: rgba(52, 0, 0, 1);
+    --sec-color:rgba(248, 246, 233, 1);
+    --third-color: rgb(219, 214, 214);
+    --four-color: rgba(52, 0, 0, 1)
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
