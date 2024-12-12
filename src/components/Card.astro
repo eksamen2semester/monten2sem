@@ -1,18 +1,18 @@
 ---
-
+const title = Astro.props.title;
+const text = Astro.props.text;
 ---
 
 <div class="card">
   <div class="date">
-    <div class="day">09</div>
+    <div class="day"><h4>{text}</h4></div>
     <div class="month">Dec</div>
   </div>
-  <div class="title">Quiz Aften</div>
+  <div class="title"><h3>{title}</h3></div>
 </div>
 
 <style>
   .card {
-    /* width: 300px; */
     height: 150px;
     background-color: #340000;
     border-radius: 10px;
@@ -24,7 +24,7 @@
     margin: 3%;
   }
   .date {
-    padding: 5px 0;
+    padding: 7px 0;
     border-style: solid;
     border-color: #ff0009;
     border-radius: 8px;
@@ -45,5 +45,9 @@
     padding: 10px;
     font-size: 50px;
     font-weight: bold;
+  }
+
+  h3 {
+    font-size: 5vh;
   }
 </style>

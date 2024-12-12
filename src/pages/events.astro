@@ -16,20 +16,82 @@ import Card from "../components/Card.astro";
   <Form />
   <div class="events">
     <div class="event">
-      <Card />
-      <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
+      <Card title="QUIZ AFTEN" text="9" />
+      <p>
+        MØNTEN QUIZ DEC, 2024 kl 19.00 <br />
+        <a
+          href="https://www.google.com/maps?q=Tagensvej+67+2200"
+          target="_blank"
+          rel="noopener"
+        >
+          Tagensvej 77, 2200 N
+        </a>
+      </p>
     </div>
     <div class="event">
-      <Card />
-      <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
+      <Card title="Drik& fold" text="13" />
+      <p>
+        MØNTEN QUIZ DEC, 2024 kl 19.00 <br />
+        <a
+          href="https://www.google.com/maps?q=Tagensvej+67+2200"
+          target="_blank"
+          rel="noopener"
+        >
+          Tagensvej 77, 2200 N
+        </a>
+      </p>
     </div>
     <div class="event">
-      <Card />
-      <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
+      <Card title="STRIK &DRIK" text="17" />
+      <p>
+        MØNTEN QUIZ DEC, 2024 kl 19.00 <br />
+        <a
+          href="https://www.google.com/maps?q=Tagensvej+67+2200"
+          target="_blank"
+          rel="noopener"
+        >
+          Tagensvej 77, 2200 N
+        </a>
+      </p>
     </div>
     <div class="event">
-      <Card />
-      <p>MØNTEN QUIZ DEC, 2024 kl 19.00 <br /> Tagensvej 77, 2200 N, Danmark</p>
+      <Card title="QUIZ AFTEN" text="23" />
+      <p>
+        MØNTEN QUIZ DEC, 2024 kl 19.00 <br />
+        <a
+          href="https://www.google.com/maps?q=Tagensvej+67+2200"
+          target="_blank"
+          rel="noopener"
+        >
+          Tagensvej 77, 2200 N
+        </a>
+      </p>
+    </div>
+    <div class="event">
+      <Card title="STRIK &DRIK" text="17" />
+      <p>
+        MØNTEN QUIZ DEC, 2024 kl 19.00 <br />
+        <a
+          href="https://www.google.com/maps?q=Tagensvej+67+2200"
+          target="_blank"
+          rel="noopener"
+        >
+          Tagensvej 77, 2200 N
+        </a>
+      </p>
+    </div>
+    <div class="event">
+      <Card title="QUIZ AFTEN" text="23" />
+      <p>
+        MØNTEN QUIZ DEC, 2024 kl 19.00 <br />
+        <a
+          href="https://www.google.com/maps?q=Tagensvej+67+2200"
+          target="_blank"
+          rel="noopener"
+        >
+          Tagensvej 77, 2200 N
+        </a>
+      </p>
     </div>
   </div>
   <Footer />
@@ -37,7 +99,7 @@ import Card from "../components/Card.astro";
 
 <style>
   img {
-    max-width: 100%;
+    max-width: 60%;
   }
   .billede {
     display: flex;
@@ -49,13 +111,18 @@ import Card from "../components/Card.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
+    align-items: baseline;
   }
 
+  h1 {
+    place-self: center;
+    color: rgba(255, 2, 10, 1);
+  }
   p {
-    font-family: Orator Std;
+    color: #2f0002;
   }
 
-  @media (min-width: 701px) {
+  @media (min-width: 801px) {
     .events {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -63,12 +130,20 @@ import Card from "../components/Card.astro";
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     .event {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1em;
       max-width: 700px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .events {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1em;
     }
   }
 </style>
