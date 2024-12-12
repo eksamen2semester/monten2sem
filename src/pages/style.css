@@ -28,3 +28,18 @@ p {
   font-family: Orator Std;
   line-height: 3ch;
 }
+
+@font-face {
+  font-family: "rubik-doodle";
+  src: url(../RubikDoodleShadow-Regular.ttf);
+}
+
+h1,
+h2,
+h3 {
+  font-family: rubik-doodle;
+}
+
+h1 {
+  font-size: 11vh;
+}
