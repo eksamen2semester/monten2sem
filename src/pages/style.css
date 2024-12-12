@@ -23,3 +23,8 @@ body {
   background-color: var(--primary-color);
   transition: all 0.3 ease-in-out;
 }
+
+p {
+  font-family: Orator Std;
+  line-height: 3ch;
+}
