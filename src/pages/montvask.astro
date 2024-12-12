@@ -6,4 +6,71 @@ import Burgermenu from "../components/Burgermenu.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout />
+<Layout>
+  <div class="montvask">
+    <img src="../img/montvask.png" alt="montvask" />
+  </div>
+  <div class="overskrift">
+    <h1>MØNTVASK</h1>
+  </div>
+  <h2>INFO</h2>
+  <section>
+    <div class="grid_1-1">
+      <div class="col1">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde minima autem id doloremque tempore porro dicta nemo quisquam adipisci aut dolorum quia odio nulla consequuntur, repellat
+          voluptas necessitatibus expedita iste beatae delectus veniam ut hic.
+        </p>
+      </div>
+      <img class="montmand" src="../img/montmand.png" alt="montmand" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  img {
+    max-width: 50%;
+  }
+
+  .montvask {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .montmand {
+    max-width: 100%;
+    padding-left: 10%;
+  }
+
+  p {
+    max-width: 65ch;
+    padding-left: 20%;
+  }
+
+  @font-face {
+    font-family: "rubik-doodle";
+    src: url(../RubikDoodleShadow-Regular.ttf);
+  }
+
+  h2 {
+    padding-left: 10%;
+    font-family: rubik-doodle;
+    font-size: 300%;
+  }
+  .overskrift {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+    font-family: rubik-doodle;
+    color: #ff020a;
+    font-size: 300%;
+    margin-top: -10%;
+  }
+</style>
