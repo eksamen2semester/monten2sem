@@ -19,12 +19,20 @@ import Footer from "../components/Footer.astro";
 
 <style>
   img {
-    max-width: 100%;
+    max-width: 55%;
+    height: auto;
   }
 
   .forside {
     display: flex;
     justify-content: center;
-    margin: 10%;
+   
   }
+
+  @media max-width: 500px{
+    img{
+      max-width: 100%;
+    }
+    }
+  
 </style>
