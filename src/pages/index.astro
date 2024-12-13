@@ -7,6 +7,19 @@ import Footer from "../components/Footer.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+
+const options = {
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhvZnB6a3Zob2h4dml0aG5iY2VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMzOTQwMzIsImV4cCI6MjA0ODk3MDAzMn0.06AltBJ-YpusPcHP7x0zhs7VQ0Ew5bGvDLgECKwJIHU",
+  },
+};
+
+const urlcafe = "https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten?tid=ep.cafe&order=pris"
+
+
+
 ---
 
 <Layout>
@@ -15,6 +28,8 @@ import Footer from "../components/Footer.astro";
     <img src="../img/montvaskbrun.png" alt="tegning af montvask" id="forsidepic"/>
   </div>
   <Toggle />
+  <h1>CAFE MENU</h1>
+  <h2>MORGENMAD (9-15:30)</h2>
   <Footer />
 </Layout>
 
@@ -34,6 +49,15 @@ import Footer from "../components/Footer.astro";
   img {
     width: 50%;
   }
+}
+
+h1{
+  text-align: center;
+  color: var(--sec-color);
+}
+
+h2{
+  color: var(--sec-color);
 }
   
 </style>
