@@ -7,10 +7,10 @@ import Enda from "./Enda.astro";
 <header>
   <div class="header">
     <div class="logo">
-      <a href="/"> <img src="../img/logo.png" alt="logo" /></a>
+      <a href="/"> <img src="../img/logo.png" alt="logo" id="logo" /></a>
     </div>
     <Reservation text="Reservation" />
-    <Enda></Enda>
+    <Enda/>
     <Burgermenu />
   </div>
 </header>
@@ -21,6 +21,16 @@ import Enda from "./Enda.astro";
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    
+  }
+
+  header{
+    position: sticky;
+    top: 0; /* Sticks at the top */
+    z-index: 1000;
+    padding: 10px;
+    background-color: var(primary-color);
+  
   }
 
   .logo img {
