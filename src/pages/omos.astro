@@ -13,25 +13,27 @@ import Card from "../components/Card.astro";
     <img src="../img/montvaskbrun.png" alt="tegning af montvask" />
   </div>
   <h1>OM OS</h1>
-  <h3>Mønten</h3>
+  <h3>MØNTEN</h3>
   <div class="monten">
-    <p class="box">
-      Dit samlingspunkt for kaffe, vin og samvær <br />
-      Mønten er en charmerende kaffe- og vinbar på Nørrebro. Vi serverer et udvalg
-      af små retter, brunch og varme måltider, alt sammen med kærlighed til råvarernes
-      oprindelse. Kom indenfor og mærk fællesskabet i vores hyggelige rammer
-    </p>
-    <img src="../img/cafedame.png" alt="barista kvinde" />
+    <div class="box">
+      <p>
+        Dit samlingspunkt for kaffe, vin og samvær <br />
+        Mønten er en charmerende kaffe- og vinbar på Nørrebro. Vi serverer et udvalg
+        af små retter, brunch og varme måltider, alt sammen med kærlighed til råvarernes
+        oprindelse. Kom indenfor og mærk fællesskabet i vores hyggelige rammer
+      </p>
+    </div>
+    <img class="image" src="../img/cafedame.png" alt="barista kvinde" />
   </div>
   <div class="gallery">
     <img src="../img/mad.png" alt="billede af mad" />
-    <img src="../img/mad.png" alt="billede af mad" />
-    <img src="../img/mad.png" alt="billede af mad" />
-    <img src="../img/mad.png" alt="billede af mad" />
-    <img src="../img/mad.png" alt="billede af mad" />
-    <img src="../img/mad.png" alt="billede af mad" />
-    <img src="../img/mad.png" alt="billede af mad" />
-    <img src="../img/mad.png" alt="billede af mad" />
+    <img src="../img/boger.png" alt="billede af mad" />
+    <img src="../img/cofee.png" alt="billede af mad" />
+    <img src="../img/cafemand.png" alt="billede af mad" />
+    <img src="../img/stemning.png" alt="billede af mad" />
+    <img src="../img/vines.png" alt="billede af mad" />
+    <img src="../img/orange.png" alt="billede af mad" />
+    <img src="../img/drinks.png" alt="billede af mad" />
   </div>
   <Footer />
 </Layout>
@@ -41,39 +43,62 @@ import Card from "../components/Card.astro";
     max-width: 60%;
   }
 
+  h1 {
+    place-self: center;
+    color: red;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
   .billede {
     display: flex;
     justify-content: center;
   }
 
-  /* @media (min-width: 801px) {
+  @media (max-width: 800px) {
     .monten {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-  } */
-
-  .monten {
-    display: flex;
   }
+  @media (min-width: 801px) {
+    .monten {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+
   .box {
     background-color: #2f0002;
-    max-width: 300px;
-    padding-left: 15px;
+    margin: 10px;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 20px;
   }
-
+  .image {
+    margin: 10px;
+    max-width: 400px;
+    border-radius: 10px;
+  }
   p {
     color: #f8f6e9;
   }
 
   .gallery {
     width: 100%;
-    /* max-width: 800px; */
     height: 200px;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
+    margin: 10px;
   }
 
   .gallery img {
