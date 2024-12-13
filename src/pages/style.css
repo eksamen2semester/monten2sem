@@ -3,6 +3,7 @@
   --sec-color: rgba(255, 2, 10, 1);
   --third-color: rgb(219, 214, 214);
   --four-color: rgba(255, 2, 10, 1);
+  --five-color: rgba(52, 0, 0, 1);
 }
 
 .dark-theme {
@@ -10,6 +11,7 @@
   --sec-color: rgba(248, 246, 233, 1);
   --third-color: rgb(219, 214, 214);
   --four-color: rgba(52, 0, 0, 1);
+  --five-color: rgb(219, 214, 214);
 }
 
 * {

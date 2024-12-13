@@ -2,11 +2,12 @@
 import "../pages/style.css";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Burgermenu from "../components/Burgermenu.astro";
+import Reservation from "../components/Reservation.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
+  <Header />
   <div class="montvask">
     <img src="../img/montvask.png" alt="montvask" />
   </div>
@@ -25,52 +26,230 @@ import Footer from "../components/Footer.astro";
       <img class="montmand" src="../img/montmand.png" alt="montmand" />
     </div>
   </section>
+  <div class="farvebane">
+    <p class="kaffe">KAFFE & VASKETID</p>
+    <p class="kaffe">49,-</p>
+  </div>
+  <h3>PRISLISTE</h3>
+  <section>
+    <div class="grid_1-1">
+      <div class="col2">
+        <p class="vask">VASKEMASKINE 1 50,-</p>
+        <p class="vask">VASKEMASKINE 2 50,-</p>
+        <p class="vask">VASKEMASKINE 3 50,-</p>
+      </div>
+      <div class="col2">
+        <p class="vask">VASKEMASKINE 1 50,-</p>
+        <p class="vask">VASKEMASKINE 2 50,-</p>
+        <p class="vask">VASKEMASKINE 3 50,-</p>
+      </div>
+    </div>
+  </section>
+  <div class="knap">
+    <Reservation text="BOOK TID" />
+  </div>
+  <h3>FAQ</h3>
+  <section>
+    <div class="grid_1-1">
+      <div class="col3">
+        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL +</p>
+      </div>
+      <div class="col3">
+        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL +</p>
+      </div>
+    </div>
+  </section>
+  <Footer />
+
+  <style>
+    img {
+      max-width: 50%;
+    }
+
+    .montvask {
+      display: flex;
+      justify-content: center;
+      margin: 10%;
+    }
+
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+    }
+
+    .montmand {
+      max-width: 100%;
+      padding-left: 10%;
+      display: block;
+    }
+
+    p {
+      max-width: 65ch;
+      padding-left: 24%;
+      margin-top: 3%;
+      color: #f8f6e9;
+    }
+
+    .farvebane {
+      background-color: #340000;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      padding: 4%;
+    }
+
+    .kaffe {
+      color: #f8f6e9;
+      place-self: center;
+      margin-left: -20%;
+      display: block;
+      max-width: 65ch;
+      line-height: 2ch;
+      font-size: 200%;
+    }
+
+    .vask {
+      font-size: 200%;
+      place-self: center;
+      line-height: 2ch;
+      margin-top: 10%;
+      color: #340000;
+    }
+
+    .spg {
+      font-size: 100%;
+      place-self: center;
+      margin-top: 10%;
+      line-height: 2ch;
+      font-size: 200%;
+      color: #340000;
+    }
+
+    .knap {
+      place-self: center;
+      margin-top: 10%;
+    }
+
+    .col1 {
+      background-color: #340000;
+      border-radius: 3%;
+    }
+
+    .col2 {
+      padding-right: 32%;
+    }
+
+    .col3 {
+      padding-right: 32%;
+    }
+
+    @font-face {
+      font-family: "rubik-doodle";
+      src: url(../RubikDoodleShadow-Regular.ttf);
+    }
+
+    h2 {
+      padding-left: 12%;
+      font-family: rubik-doodle;
+      font-size: 300%;
+      margin-top: 10%;
+      margin-bottom: 2%;
+    }
+
+    h3 {
+      font-size: 300%;
+      padding-left: 12%;
+      margin-top: 7%;
+      margin-bottom: 3%;
+    }
+    .overskrift {
+      display: flex;
+      justify-content: center;
+      margin: 10%;
+      font-family: rubik-doodle;
+      color: #ff020a;
+      font-size: 250%;
+      margin-top: -10%;
+    }
+
+    @media (max-width: 600px) {
+      .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+      }
+
+      h1 {
+        font-size: 180%;
+      }
+
+      h2 {
+        font-size: 240%;
+        margin-bottom: 5%;
+        padding-left: 7%;
+      }
+
+      p {
+        padding-left: 7%;
+        margin-bottom: 5%;
+        font-size: 110%;
+      }
+
+      img {
+        max-width: 80%;
+      }
+
+      .montmand {
+        max-width: 100%;
+        display: block;
+        place-self: center;
+        padding-right: 7%;
+        margin-top: 7%;
+        margin-bottom: 7%;
+      }
+
+      .kaffe {
+        margin-left: -10%;
+        font-size: 150%;
+        line-height: 2ch;
+        margin-top: 5%;
+      }
+
+      .vask {
+        line-height: 5ch;
+        place-self: center;
+        font-size: 150%;
+        margin-top: 5%;
+        padding-left: 43%;
+      }
+
+      .spg {
+        line-height: 1ch;
+        place-self: center;
+        font-size: 150%;
+        padding-left: 43%;
+      }
+
+      h3 {
+        font-size: 250%;
+        margin-bottom: 5%;
+        padding-left: 7%;
+        margin-top: 10%;
+      }
+
+      .knap {
+        margin-bottom: 2%;
+        padding-left: 8%;
+        margin-top: 5%;
+      }
+    }
+  </style>
 </Layout>
-
-<style>
-  img {
-    max-width: 50%;
-  }
-
-  .montvask {
-    display: flex;
-    justify-content: center;
-    margin: 10%;
-  }
-
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-  }
-
-  .montmand {
-    max-width: 100%;
-    padding-left: 10%;
-  }
-
-  p {
-    max-width: 65ch;
-    padding-left: 20%;
-  }
-
-  @font-face {
-    font-family: "rubik-doodle";
-    src: url(../RubikDoodleShadow-Regular.ttf);
-  }
-
-  h2 {
-    padding-left: 10%;
-    font-family: rubik-doodle;
-    font-size: 300%;
-  }
-  .overskrift {
-    display: flex;
-    justify-content: center;
-    margin: 10%;
-    font-family: rubik-doodle;
-    color: #ff020a;
-    font-size: 300%;
-    margin-top: -10%;
-  }
-</style>
