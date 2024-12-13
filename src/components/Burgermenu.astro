@@ -112,7 +112,7 @@
     transition: 0.5s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     height: 100vh;
-    z-index: 1;
+    z-index: 3;
   }
 
   .nav-menu.active {
@@ -144,26 +144,25 @@
 </style>
 
 <script>
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
 
-hamburger!.addEventListener("click", mobileMenu);
+  hamburger!.addEventListener("click", mobileMenu);
 
-function mobileMenu() {
-  hamburger!.classList.toggle("active");
-  navMenu!.classList.toggle("active");
-}
+  function mobileMenu() {
+    hamburger!.classList.toggle("active");
+    navMenu!.classList.toggle("active");
+  }
 
-/* JavaScript der sørger for at burger menuen   */
-/* lukker når man klikker på et link            */
-// Step 9
-const navLink = document.querySelectorAll(".nav-link");
+  /* JavaScript der sørger for at burger menuen   */
+  /* lukker når man klikker på et link            */
+  // Step 9
+  const navLink = document.querySelectorAll(".nav-link");
 
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+  navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-function closeMenu() {
-  hamburger!.classList.remove("active");
-  navMenu!.classList.remove("active");
-}
-
+  function closeMenu() {
+    hamburger!.classList.remove("active");
+    navMenu!.classList.remove("active");
+  }
 </script>

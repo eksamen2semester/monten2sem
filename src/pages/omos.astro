@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Toggle from "../components/Toggle.astro";
+import Footer from "../components/Footer.astro";
+import Form from "../components/Form.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout>
+  <Header />
+  <div class="billede">
+    <img src="../img/montvaskbrun.png" alt="tegning af montvask" />
+  </div>
+  <h1>OM OS</h1>
+  <h3>Mønten</h3>
+  <div class="monten">
+    <p class="box">
+      Dit samlingspunkt for kaffe, vin og samvær <br />
+      Mønten er en charmerende kaffe- og vinbar på Nørrebro. Vi serverer et udvalg
+      af små retter, brunch og varme måltider, alt sammen med kærlighed til råvarernes
+      oprindelse. Kom indenfor og mærk fællesskabet i vores hyggelige rammer
+    </p>
+    <img src="../img/cafedame.png" alt="barista kvinde" />
+  </div>
+  <div class="gallery">
+    <img src="../img/mad.png" alt="billede af mad" />
+    <img src="../img/mad.png" alt="billede af mad" />
+    <img src="../img/mad.png" alt="billede af mad" />
+    <img src="../img/mad.png" alt="billede af mad" />
+    <img src="../img/mad.png" alt="billede af mad" />
+    <img src="../img/mad.png" alt="billede af mad" />
+    <img src="../img/mad.png" alt="billede af mad" />
+    <img src="../img/mad.png" alt="billede af mad" />
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  img {
+    max-width: 60%;
+  }
+
+  .billede {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* @media (min-width: 801px) {
+    .monten {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+    }
+  } */
+
+  .monten {
+    display: flex;
+  }
+  .box {
+    background-color: #2f0002;
+    max-width: 300px;
+    padding-left: 15px;
+  }
+
+  p {
+    color: #f8f6e9;
+  }
+
+  .gallery {
+    width: 100%;
+    /* max-width: 800px; */
+    height: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .gallery img {
+    height: 100%;
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>

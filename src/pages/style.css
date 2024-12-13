@@ -40,10 +40,12 @@ h2,
 h3,
 h4 {
   font-family: rubik-doodle;
+  font-weight: lighter;
 }
 
 h1 {
-  font-size: 11vh;
+  font-size: 9vh;
+  margin-bottom: 20px;
 }
 
 a {
