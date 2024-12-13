@@ -9,6 +9,10 @@ import Layout from "../layouts/Layout.astro"
 <label class="switch">
     <input type="checkbox">
     <span class="slider round"></span>
+    <div class="toggle-labels">
+    <span class="en">EN</span>
+    <span class="da">DA</span>
+</div>
   </label>
   
 </Layout>
@@ -36,9 +40,8 @@ import Layout from "../layouts/Layout.astro"
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(four-color);
   transition: .4s;
-  border: solid red;
+  border: solid var(--sec-color);
 }
 
 .slider:before {
@@ -48,7 +51,7 @@ import Layout from "../layouts/Layout.astro"
   width: 26px;
   left: 3px;
   bottom: 3px;
-  background-color: red;
+  background-color:var(--sec-color) ;
   transition: .4s;
 }
 
@@ -62,6 +65,8 @@ input:checked + .slider:before {
 }
 
 
+
+
 .slider.round {
   border-radius: 34px;
 }
@@ -69,4 +74,19 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.toggle-labels{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    font-size: 12px;
+    padding: 0 8px;
+    transform: translateY(-50%);
+
+}
+
+
   </style>
+
