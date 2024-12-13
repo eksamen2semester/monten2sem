@@ -32,16 +32,26 @@ import Footer from "../components/Footer.astro";
   </div>
   <h3>PRISLISTE</h3>
   <section>
-    <div class="grid_1-1">
+    <div class="grid_1-1-1-1">
       <div class="col2">
-        <p class="vask">VASKEMASKINE 1 50,-</p>
-        <p class="vask">VASKEMASKINE 2 50,-</p>
-        <p class="vask">VASKEMASKINE 3 50,-</p>
+        <p class="vask">VASKEMASKINE 1</p>
+        <p class="vask">VASKEMASKINE 2</p>
+        <p class="vask">VASKEMASKINE 3</p>
       </div>
       <div class="col2">
-        <p class="vask">VASKEMASKINE 1 50,-</p>
-        <p class="vask">VASKEMASKINE 2 50,-</p>
-        <p class="vask">VASKEMASKINE 3 50,-</p>
+        <p class="vask">50,-</p>
+        <p class="vask">50,-</p>
+        <p class="vask">50,-</p>
+      </div>
+      <div class="col2">
+        <p class="vask">VASKEMASKINE 1</p>
+        <p class="vask">VASKEMASKINE 2</p>
+        <p class="vask">VASKEMASKINE 3</p>
+      </div>
+      <div class="col2">
+        <p class="vask">50,-</p>
+        <p class="vask">50,-</p>
+        <p class="vask">50,-</p>
       </div>
     </div>
   </section>
@@ -50,28 +60,44 @@ import Footer from "../components/Footer.astro";
   </div>
   <h3>FAQ</h3>
   <section>
-    <div class="grid_1-1">
+    <div class="grid_1-1-1-1">
       <div class="col3">
-        <p class="spg">SPØRGSMÅL +</p>
-        <p class="spg">SPØRGSMÅL +</p>
-        <p class="spg">SPØRGSMÅL +</p>
-        <p class="spg">SPØRGSMÅL +</p>
-        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">SPØRGSMÅL</p>
+        <p class="spg">SPØRGSMÅL</p>
+        <p class="spg">SPØRGSMÅL</p>
+        <p class="spg">SPØRGSMÅL</p>
+        <p class="spg">SPØRGSMÅL</p>
       </div>
       <div class="col3">
-        <p class="spg">SPØRGSMÅL +</p>
-        <p class="spg">SPØRGSMÅL +</p>
-        <p class="spg">SPØRGSMÅL +</p>
-        <p class="spg">SPØRGSMÅL +</p>
-        <p class="spg">SPØRGSMÅL +</p>
+        <p class="spg">+</p>
+        <p class="spg">+</p>
+        <p class="spg">+</p>
+        <p class="spg">+</p>
+        <p class="spg">+</p>
+      </div>
+      <div class="col3">
+        <p class="spg">SPØRGSMÅL</p>
+        <p class="spg">SPØRGSMÅL</p>
+        <p class="spg">SPØRGSMÅL</p>
+        <p class="spg">SPØRGSMÅL</p>
+        <p class="spg">SPØRGSMÅL</p>
+      </div>
+      <div class="col3">
+        <p class="spg">+</p>
+        <p class="spg">+</p>
+        <p class="spg">+</p>
+        <p class="spg">+</p>
+        <p class="spg">+</p>
       </div>
     </div>
   </section>
-  <Footer />
+  <div class="footer">
+    <Footer />
+  </div>
 
   <style>
     img {
-      max-width: 50%;
+      max-width: 60%;
     }
 
     .montvask {
@@ -83,6 +109,12 @@ import Footer from "../components/Footer.astro";
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 1em;
+    }
+
+    .grid_1-1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 1em;
     }
 
@@ -117,20 +149,21 @@ import Footer from "../components/Footer.astro";
     }
 
     .vask {
-      font-size: 200%;
+      font-size: 180%;
       place-self: center;
       line-height: 2ch;
       margin-top: 10%;
       color: #340000;
+      padding-left: 87%;
     }
 
     .spg {
-      font-size: 100%;
       place-self: center;
       margin-top: 10%;
       line-height: 2ch;
       font-size: 200%;
       color: #340000;
+      padding-left: 80%;
     }
 
     .knap {
@@ -151,6 +184,11 @@ import Footer from "../components/Footer.astro";
       padding-right: 32%;
     }
 
+    .footer {
+      margin-top: 10%;
+      margin: 5%;
+    }
+
     @font-face {
       font-family: "rubik-doodle";
       src: url(../RubikDoodleShadow-Regular.ttf);
@@ -166,7 +204,7 @@ import Footer from "../components/Footer.astro";
 
     h3 {
       font-size: 300%;
-      padding-left: 12%;
+      padding-left: 11%;
       margin-top: 7%;
       margin-bottom: 3%;
     }
@@ -249,6 +287,12 @@ import Footer from "../components/Footer.astro";
         margin-bottom: 2%;
         padding-left: 8%;
         margin-top: 5%;
+      }
+
+      .grid_1-1-1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
       }
     }
   </style>
