@@ -6,7 +6,9 @@ import Burgermenu from "./Burgermenu.astro";
 <header>
   <div class="header">
     <div class="logo">
-      <a href="/"> <img src="../img/logo.png" alt="logo" id="logo" /></a>
+      <a href="/">
+        <img src="../img/logo.webp" alt="logo af mønten" id="logo" /></a
+      >
     </div>
     <Reservation text="Reservation" />
     <Burgermenu />
@@ -15,20 +17,18 @@ import Burgermenu from "./Burgermenu.astro";
 
 <style>
   .header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
     align-items: center;
     margin-bottom: 15px;
-    
   }
 
-  header{
+  header {
     position: sticky;
-    top: 0; /* Sticks at the top */
+    top: 0;
     z-index: 1000;
     padding: 10px;
-    background-color: var(primary-color);
-  
+    background-color: var(--primary-color);
   }
 
   .logo img {
