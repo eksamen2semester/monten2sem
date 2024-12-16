@@ -4,10 +4,8 @@ import Header from "../components/Header.astro";
 import Toggle from "../components/Toggle.astro";
 import Footer from "../components/Footer.astro";
 
-
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
 
 const options = {
   headers: {
@@ -16,16 +14,18 @@ const options = {
   },
 };
 
-const urlcafe = "https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten?tid=ep.cafe&order=pris"
-
-
-
+const urlcafe =
+  "https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten?tid=ep.cafe&order=pris";
 ---
 
 <Layout>
   <Header />
   <div class="forside">
-    <img src="../img/montvaskbrun.png" alt="tegning af montvask" id="forsidepic"/>
+    <img
+      src="../img/montvaskbrun.png"
+      alt="tegning af montvask"
+      id="forsidepic"
+    />
   </div>
   <Toggle />
   <h1>CAFE MENU</h1>
@@ -42,22 +42,20 @@ const urlcafe = "https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten?tid=ep.
   .forside {
     display: flex;
     justify-content: center;
-   
   }
 
   @media (max-width: 600px) {
-  img {
-    width: 50%;
+    img {
+      width: 50%;
+    }
   }
-}
 
-h1{
-  text-align: center;
-  color: var(--sec-color);
-}
+  h1 {
+    text-align: center;
+    color: var(--sec-color);
+  }
 
-h2{
-  color: var(--sec-color);
-}
-  
+  h2 {
+    color: var(--sec-color);
+  }
 </style>
