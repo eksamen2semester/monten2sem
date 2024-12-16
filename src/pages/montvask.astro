@@ -9,23 +9,23 @@ import Footer from "../components/Footer.astro";
 <Layout>
   <Header />
   <div class="montvask">
-    <img src="../img/montvask.png" alt="montvask" />
+    <img src="../img/montvask.webp" alt="montvask" />
   </div>
   <div class="overskrift">
     <h1>MØNTVASK</h1>
   </div>
   <h2>INFO</h2>
-  <section>
-    <div class="grid_1-1">
-      <div class="col1">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde minima autem id doloremque tempore porro dicta nemo quisquam adipisci aut dolorum quia odio nulla consequuntur, repellat
-          voluptas necessitatibus expedita iste beatae delectus veniam ut hic.
-        </p>
-      </div>
-      <img class="montmand" src="../img/montmand.png" alt="montmand" />
+  <div class="monten">
+    <div class="box">
+      <p>
+        Dit samlingspunkt for kaffe, vin og samvær <br />
+        Mønten er en charmerende kaffe- og vinbar på Nørrebro. Vi serverer et udvalg
+        af små retter, brunch og varme måltider, alt sammen med kærlighed til råvarernes
+        oprindelse. Kom indenfor og mærk fællesskabet i vores hyggelige rammer
+      </p>
     </div>
-  </section>
+    <img class="image" src="../img/cafedame.webp" alt="barista kvinde" />
+  </div>
   <div class="farvebane">
     <p class="kaffe">KAFFE & VASKETID</p>
     <p class="kaffe">49,-</p>
@@ -34,9 +34,9 @@ import Footer from "../components/Footer.astro";
   <section>
     <div class="grid_1-1">
       <div class="col2">
-        <p class="vask">VASKEMASKINE 50kr,-</p>
-        <p class="vask">VASKEMASKINE 50kr,-</p>
-        <p class="vask">VASKEMASKINE 50kr,-</p>
+        <p class="vask">VASKEMASKINE 1: 50kr,-</p>
+        <p class="vask">VASKEMASKINE 2: 50kr,-</p>
+        <p class="vask">VASKEMASKINE 3: 50kr,-</p>
       </div>
       <!-- <div class="col2">
         <p class="vask">50,-</p>
@@ -44,9 +44,9 @@ import Footer from "../components/Footer.astro";
         <p class="vask">50,-</p>
       </div> -->
       <div class="col2">
-        <p class="vask">VASKEMASKINE 50kr,-</p>
-        <p class="vask">VASKEMASKINE 50kr,-</p>
-        <p class="vask">VASKEMASKINE 50kr,-</p>
+        <p class="vask">VASKEMASKINE 4: 50kr,-</p>
+        <p class="vask">VASKEMASKINE 5: 50kr,-</p>
+        <p class="vask">VASKEMASKINE 6: 50kr,-</p>
       </div>
       <!-- <div class="col2">
         <p class="vask">50,-</p>
@@ -65,8 +65,11 @@ import Footer from "../components/Footer.astro";
         <button>spørgsmål +</button>
         <div class="content">
           <p class="spørgsmål">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
-            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+            dignissimos beatae nobis rem inventore sapiente, perferendis
+            accusantium consequuntur tempore ea obcaecati modi mollitia
+            assumenda at error. Veniam nulla minus soluta, vitae voluptatum,
+            modi eos est ad sint iste repellendus accusamus?
           </p>
         </div>
       </div>
@@ -74,24 +77,33 @@ import Footer from "../components/Footer.astro";
         <button>spørgsmål +</button>
         <div class="content">
           <p class="spørgsmål">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
-            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+            dignissimos beatae nobis rem inventore sapiente, perferendis
+            accusantium consequuntur tempore ea obcaecati modi mollitia
+            assumenda at error. Veniam nulla minus soluta, vitae voluptatum,
+            modi eos est ad sint iste repellendus accusamus?
           </p>
         </div>
       </div><div class="dropdown">
         <button>spørgsmål +</button>
         <div class="content">
           <p class="spørgsmål">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
-            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+            dignissimos beatae nobis rem inventore sapiente, perferendis
+            accusantium consequuntur tempore ea obcaecati modi mollitia
+            assumenda at error. Veniam nulla minus soluta, vitae voluptatum,
+            modi eos est ad sint iste repellendus accusamus?
           </p>
         </div>
       </div><div class="dropdown">
         <button>spørgsmål +</button>
         <div class="content">
           <p class="spørgsmål">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
-            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+            dignissimos beatae nobis rem inventore sapiente, perferendis
+            accusantium consequuntur tempore ea obcaecati modi mollitia
+            assumenda at error. Veniam nulla minus soluta, vitae voluptatum,
+            modi eos est ad sint iste repellendus accusamus?
           </p>
         </div>
       </div>
@@ -121,7 +133,7 @@ import Footer from "../components/Footer.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
-    justify-content: space-between;
+    align-items:;
   }
 
   .grid_1-1-1-1 {
@@ -131,16 +143,16 @@ import Footer from "../components/Footer.astro";
   }
 
   /* Billedet af manden og møntvask i info afsnittet */
-  .montmand {
+  /* .montmand {
     max-width: 100%;
     padding-left: 10%;
     display: block;
-  }
+  } */
 
   /* p er kun brugt i info boksen */
   p {
     max-width: 65ch;
-    padding-left: 24%;
+    /* padding-left: 24%; */
     margin-top: 3%;
     color: #f8f6e9;
   }
@@ -157,7 +169,7 @@ import Footer from "../components/Footer.astro";
   .kaffe {
     color: #f8f6e9;
     place-self: center;
-    margin-left: -20%;
+    /* margin-left: -20%; */
     display: block;
     max-width: 65ch;
     line-height: 2ch;
@@ -196,12 +208,6 @@ import Footer from "../components/Footer.astro";
     padding-right: 32%;
   }
 
-  /* layout af footer*/
-  .footer {
-    margin-top: 10%;
-    margin: 5%;
-  }
-
   /* dropdown menuen */
   .dropdown {
     display: inline-block;
@@ -221,7 +227,7 @@ import Footer from "../components/Footer.astro";
 
   .dropdown a {
     display: block;
-    color: black;
+    color: #340000;
     text-decoration: none;
     padding: 10px 10px;
   }
@@ -230,8 +236,8 @@ import Footer from "../components/Footer.astro";
     display: none;
     position: relative;
     background-color: #f8f6e9;
-    min-width: 100px;
-    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+    min-width: 65ch;
+    /* box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8); */
   }
 
   .spørgsmål {
@@ -340,6 +346,36 @@ import Footer from "../components/Footer.astro";
     .dropdown .content {
       position: relative;
       display: none;
+    }
+  }
+
+  .box {
+    background-color: #2f0002;
+    margin: 10px;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .image {
+    margin: 10px;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 800px) {
+    .monten {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (min-width: 801px) {
+    .monten {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
     }
   }
 </style>
