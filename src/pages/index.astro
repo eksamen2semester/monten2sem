@@ -7,37 +7,72 @@ import Toggle from "../components/Toggle.astro";
 import Footer from "../components/Footer.astro";
 import Card2 from "../components/Card2.astro";
 
-const data = await fetch("https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten",
- {
-  //henter alt data i databasen
+// her henter den hele tabellen fra subabase husk at man også kan filtere ved at skrive kategorien i url
+const data = await fetch(
+  "https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten?",
+  {
+    //henter alt data i databasen
     method: "GET",
     headers: {
       apikey:
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhvZnB6a3Zob2h4dml0aG5iY2VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMzOTQwMzIsImV4cCI6MjA0ODk3MDAzMn0.06AltBJ-YpusPcHP7x0zhs7VQ0Ew5bGvDLgECKwJIHU",
     },
-}
+  }
 ).then((res) => res.json());
 
 console.log(data);
 
+// her henter jeg den filterede data på baggrund af navnet det hedder type fordi det hedder vores kolonne
+const filteredDataØl = data.filter((item) => item.type === "øl");
+
+const filteredDataVin = data.filter((item) => item.type === "vin");
+
+const filteredDataDrinks = data.filter((item) => item.type === "drink");
+
+const filteredDataVarm = data.filter((item) => item.type === "varm");
+
+const filteredDataMorgen = data.filter((item) => item.type === "morgen");
 ---
 
 <Layout>
   <Header />
   <div class="forside">
-    <img src="../img/montvaskbrun.png" alt="tegning af montvask" id="forsidepic"/>
+    <img
+      src="../img/montvaskbrun.png"
+      alt="tegning af montvask"
+      id="forsidepic"
+    />
   </div>
   <Toggle />
+  <!-- her hentes alt
   <h1>CAFE MENU</h1>
   <div>
     <h2>MORGENMAD (9-15:30)</h2>
-        {data.map((item) => <Card2 data={item}/>)}
-</div>
-<div>
-<h2>FROKOST</h2>
-</div>
-  <Footer />
+    {data.map((item) => <Card2 data={item} />)}
+  </div> -->
+  <div>
+    <!-- Her henter vi alt på baggrund af  katetegori og får det vist i browseren-->
+    <h2>Øl</h2>
+    {filteredDataØl.map((item) => <Card2 data={item} />)}
+  </div>
+  <div>
+    <h2>Vin</h2>
+    {filteredDataVin.map((item) => <Card2 data={item} />)}
+  </div>
+  <div>
+    <h2>Drinks</h2>
+    {filteredDataDrinks.map((item) => <Card2 data={item} />)}
+  </div>
+  <div>
+    <h2>Varme drikke</h2>
+    {filteredDataVarm.map((item) => <Card2 data={item} />)}
+  </div>
+  <div>
+    <h2>Morgenmad</h2>
+    {filteredDataMorgen.map((item) => <Card2 data={item} />)}
+  </div>
 </Layout>
+<Footer />
 
 <style>
   img {
@@ -48,25 +83,22 @@ console.log(data);
   .forside {
     display: flex;
     justify-content: center;
-   
   }
 
   @media (max-width: 600px) {
-  img {
-    width: 50%;
+    img {
+      width: 50%;
+    }
   }
-}
 
-h1{
-  text-align: center;
-  color: var(--sec-color);
-  margin-top: 20%;
-  
-}
+  h1 {
+    text-align: center;
+    color: var(--sec-color);
+    margin-top: 20%;
+  }
 
-h2{
-  color: var(--sec-color);
-  font-family: Orator Std;
-}
-  
+  h2 {
+    color: var(--sec-color);
+    font-family: Orator Std;
+  }
 </style>

@@ -3,7 +3,7 @@ import Enda from "./Enda.astro";
 ---
 
 <nav class="navbar">
-  <a href="index.astro" class="nav-logo"></a>
+  <a href="index.astro" class="nav-logo" aria-label="Åbn menu"></a>
   <ul class="nav-menu">
     <li class="nav-item">
       <a href="/" class="nav-link">Forside</a>
@@ -20,7 +20,9 @@ import Enda from "./Enda.astro";
     <li class="nav-item">
       <a href="/omos" class="nav-link">Om os</a>
     </li>
-    <Enda />
+    <li>
+      <Enda />
+    </li>
   </ul>
 
   <div class="hamburger">
@@ -89,7 +91,7 @@ import Enda from "./Enda.astro";
   .nav-link {
     font-size: 1.6rem;
     font-weight: 400;
-    color: var(--five-color;)
+    color: var(--five-color;);
   }
 
   .nav-link:hover {
