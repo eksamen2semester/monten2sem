@@ -32,27 +32,27 @@ import Footer from "../components/Footer.astro";
   </div>
   <h3>PRISLISTE</h3>
   <section>
-    <div class="grid_1-1-1-1">
+    <div class="grid_1-1">
       <div class="col2">
-        <p class="vask">VASKEMASKINE</p>
-        <p class="vask">VASKEMASKINE</p>
-        <p class="vask">VASKEMASKINE</p>
+        <p class="vask">VASKEMASKINE 50kr,-</p>
+        <p class="vask">VASKEMASKINE 50kr,-</p>
+        <p class="vask">VASKEMASKINE 50kr,-</p>
       </div>
+      <!-- <div class="col2">
+        <p class="vask">50,-</p>
+        <p class="vask">50,-</p>
+        <p class="vask">50,-</p>
+      </div> -->
       <div class="col2">
-        <p class="vask">50,-</p>
-        <p class="vask">50,-</p>
-        <p class="vask">50,-</p>
+        <p class="vask">VASKEMASKINE 50kr,-</p>
+        <p class="vask">VASKEMASKINE 50kr,-</p>
+        <p class="vask">VASKEMASKINE 50kr,-</p>
       </div>
-      <div class="col2">
-        <p class="vask">VASKEMASKINE</p>
-        <p class="vask">VASKEMASKINE</p>
-        <p class="vask">VASKEMASKINE</p>
-      </div>
-      <div class="col2">
+      <!-- <div class="col2">
         <p class="vask">50,-</p>
         <p class="vask">50,-</p>
         <p class="vask">50,-</p>
-      </div>
+      </div> -->
     </div>
   </section>
   <div class="knap">
@@ -60,240 +60,286 @@ import Footer from "../components/Footer.astro";
   </div>
   <h3>FAQ</h3>
   <section>
-    <div class="grid_1-1-1-1">
-      <div class="col3">
-        <p class="spg">SPØRGSMÅL</p>
-        <p class="spg">SPØRGSMÅL</p>
-        <p class="spg">SPØRGSMÅL</p>
-        <p class="spg">SPØRGSMÅL</p>
-        <p class="spg">SPØRGSMÅL</p>
+    <div class="grid_1-1">
+      <div class="dropdown">
+        <button>spørgsmål +</button>
+        <div class="content">
+          <p class="spørgsmål">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
+            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+          </p>
+        </div>
       </div>
-      <div class="col3">
-        <p class="spg">+</p>
-        <p class="spg">+</p>
-        <p class="spg">+</p>
-        <p class="spg">+</p>
-        <p class="spg">+</p>
-      </div>
-      <div class="col3">
-        <p class="spg">SPØRGSMÅL</p>
-        <p class="spg">SPØRGSMÅL</p>
-        <p class="spg">SPØRGSMÅL</p>
-        <p class="spg">SPØRGSMÅL</p>
-        <p class="spg">SPØRGSMÅL</p>
-      </div>
-      <div class="col3">
-        <p class="spg">+</p>
-        <p class="spg">+</p>
-        <p class="spg">+</p>
-        <p class="spg">+</p>
-        <p class="spg">+</p>
+      <div class="dropdown">
+        <button>spørgsmål +</button>
+        <div class="content">
+          <p class="spørgsmål">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
+            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+          </p>
+        </div>
+      </div><div class="dropdown">
+        <button>spørgsmål +</button>
+        <div class="content">
+          <p class="spørgsmål">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
+            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+          </p>
+        </div>
+      </div><div class="dropdown">
+        <button>spørgsmål +</button>
+        <div class="content">
+          <p class="spørgsmål">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
+            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+          </p>
+        </div>
       </div>
     </div>
   </section>
   <div class="footer">
     <Footer />
   </div>
+</Layout>
+<script src="./script.js"></script>
 
-  <style>
-    img {
-      max-width: 60%;
-    }
+<style>
+  /* img er billedet af håndtegnet illustration */
+  img {
+    max-width: 50%;
+  }
 
-    .montvask {
-      display: flex;
-      justify-content: center;
-      margin: 10%;
-    }
+  /* montvask er den håndtegnede illustration */
+  .montvask {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+  }
 
+  /* grid er brugt til info og med vaskemaskinerne */
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    justify-content: space-between;
+  }
+
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+  }
+
+  /* Billedet af manden og møntvask i info afsnittet */
+  .montmand {
+    max-width: 100%;
+    padding-left: 10%;
+    display: block;
+  }
+
+  /* p er kun brugt i info boksen */
+  p {
+    max-width: 65ch;
+    padding-left: 24%;
+    margin-top: 3%;
+    color: #f8f6e9;
+  }
+
+  /* Den mørkebrune markering henover siden */
+  .farvebane {
+    background-color: #340000;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 4%;
+  }
+
+  /* teksten inde i den mørkebrune markering */
+  .kaffe {
+    color: #f8f6e9;
+    place-self: center;
+    margin-left: -20%;
+    display: block;
+    max-width: 65ch;
+    line-height: 2ch;
+    font-size: 200%;
+  }
+
+  /* teksten til vaskemaskinen */
+  .vask {
+    font-size: 180%;
+    place-self: center;
+    line-height: 2ch;
+    margin-top: 10%;
+    color: #340000;
+    padding-left: 20%;
+  }
+
+  /* reservationsknappen  */
+  .knap {
+    place-self: center;
+    margin-top: 10%;
+  }
+
+  /* farven på teksten til dropdown */
+  .spørgsmål {
+    color: #340000;
+  }
+
+  /* den mørkebrune boks omkring info */
+  .col1 {
+    background-color: #340000;
+    border-radius: 3%;
+  }
+
+  /* placeringen af vaskemaine teksten */
+  .col2 {
+    padding-right: 32%;
+  }
+
+  /* layout af footer*/
+  .footer {
+    margin-top: 10%;
+    margin: 5%;
+  }
+
+  /* dropdown menuen */
+  .dropdown {
+    display: inline-block;
+    padding: 5% 25%;
+  }
+
+  /* knappen der hedder spørgsmål */
+  .dropdown button {
+    background-color: #f8f6e9;
+    color: #340000;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 200%;
+    text-decoration: underline;
+  }
+
+  .dropdown a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 10px;
+  }
+
+  .dropdown .content {
+    display: none;
+    position: relative;
+    background-color: #f8f6e9;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+  }
+
+  .spørgsmål {
+    padding: 10%;
+  }
+
+  /* h2 er info  */
+  h2 {
+    padding-left: 12%;
+    font-family: rubik-doodle;
+    font-size: 300%;
+    margin-top: 10%;
+    margin-bottom: 2%;
+  }
+
+  /* h3 er prisliste og FAQ */
+  h3 {
+    font-size: 300%;
+    padding-left: 11%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+  }
+
+  /* overskriften møntvask */
+  .overskrift {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+    font-family: rubik-doodle;
+    color: #ff020a;
+    font-size: 250%;
+    margin-top: -10%;
+  }
+
+  @media (max-width: 600px) {
     .grid_1-1 {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 1em;
     }
 
-    .grid_1-1-1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 1em;
+    h1 {
+      font-size: 180%;
+    }
+
+    h2 {
+      font-size: 240%;
+      margin-bottom: 5%;
+      padding-left: 7%;
+    }
+
+    p {
+      padding-left: 7%;
+      margin-bottom: 5%;
+      font-size: 110%;
+    }
+
+    img {
+      max-width: 80%;
     }
 
     .montmand {
       max-width: 100%;
-      padding-left: 10%;
       display: block;
-    }
-
-    p {
-      max-width: 65ch;
-      padding-left: 24%;
-      margin-top: 3%;
-      color: #f8f6e9;
-    }
-
-    .farvebane {
-      background-color: #340000;
-      margin-top: 5%;
-      margin-bottom: 5%;
-      padding: 4%;
+      place-self: center;
+      padding-right: 7%;
+      margin-top: 7%;
+      margin-bottom: 7%;
     }
 
     .kaffe {
-      color: #f8f6e9;
-      place-self: center;
-      margin-left: -20%;
-      display: block;
-      max-width: 65ch;
+      margin-left: -10%;
+      font-size: 150%;
       line-height: 2ch;
-      font-size: 200%;
+      margin-top: 5%;
     }
 
     .vask {
-      font-size: 180%;
+      line-height: 5ch;
       place-self: center;
-      line-height: 2ch;
-      margin-top: 10%;
-      color: #340000;
-      padding-left: 87%;
-    }
-
-    .spg {
-      place-self: center;
-      margin-top: 10%;
-      line-height: 2ch;
-      font-size: 200%;
-      color: #340000;
-      padding-left: 80%;
-    }
-
-    .knap {
-      place-self: center;
-      margin-top: 10%;
-    }
-
-    .col1 {
-      background-color: #340000;
-      border-radius: 3%;
-    }
-
-    .col2 {
-      padding-right: 32%;
-    }
-
-    .col3 {
-      padding-right: 32%;
-    }
-
-    .footer {
-      margin-top: 10%;
-      margin: 5%;
-    }
-
-    @font-face {
-      font-family: "rubik-doodle";
-      src: url(../RubikDoodleShadow-Regular.ttf);
-    }
-
-    h2 {
-      padding-left: 12%;
-      font-family: rubik-doodle;
-      font-size: 300%;
-      margin-top: 10%;
-      margin-bottom: 2%;
+      font-size: 150%;
+      margin-top: 5%;
+      padding-left: 40%;
     }
 
     h3 {
-      font-size: 300%;
-      padding-left: 11%;
-      margin-top: 7%;
-      margin-bottom: 3%;
-    }
-    .overskrift {
-      display: flex;
-      justify-content: center;
-      margin: 10%;
-      font-family: rubik-doodle;
-      color: #ff020a;
       font-size: 250%;
-      margin-top: -10%;
+      margin-bottom: 5%;
+      padding-left: 7%;
+      margin-top: 10%;
     }
 
-    @media (max-width: 600px) {
-      .grid_1-1 {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1em;
-      }
-
-      h1 {
-        font-size: 180%;
-      }
-
-      h2 {
-        font-size: 240%;
-        margin-bottom: 5%;
-        padding-left: 7%;
-      }
-
-      p {
-        padding-left: 7%;
-        margin-bottom: 5%;
-        font-size: 110%;
-      }
-
-      img {
-        max-width: 80%;
-      }
-
-      .montmand {
-        max-width: 100%;
-        display: block;
-        place-self: center;
-        padding-right: 7%;
-        margin-top: 7%;
-        margin-bottom: 7%;
-      }
-
-      .kaffe {
-        margin-left: -10%;
-        font-size: 150%;
-        line-height: 2ch;
-        margin-top: 5%;
-      }
-
-      .vask {
-        line-height: 5ch;
-        place-self: center;
-        font-size: 150%;
-        margin-top: 5%;
-        padding-left: 43%;
-      }
-
-      .spg {
-        line-height: 1ch;
-        place-self: center;
-        font-size: 150%;
-        padding-left: 43%;
-      }
-
-      h3 {
-        font-size: 250%;
-        margin-bottom: 5%;
-        padding-left: 7%;
-        margin-top: 10%;
-      }
-
-      .knap {
-        margin-bottom: 2%;
-        padding-left: 8%;
-        margin-top: 5%;
-      }
-
-      .grid_1-1-1-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1em;
-      }
+    .knap {
+      margin-bottom: 2%;
+      padding-left: 2%;
+      margin-top: 5%;
     }
-  </style>
-</Layout>
+
+    .dropdown button {
+      font-size: 150%;
+      padding-left: 30%;
+      line-height: 1ch;
+      text-decoration: underline;
+    }
+
+    .dropdown .content {
+      position: relative;
+      display: none;
+    }
+  }
+</style>
