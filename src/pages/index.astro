@@ -5,33 +5,25 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Toggle from "../components/Toggle.astro";
 import Footer from "../components/Footer.astro";
+import Card2 from "../components/Card2.astro";
 
+const data = await fetch("https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten",
+ {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhvZnB6a3Zob2h4dml0aG5iY2VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMzOTQwMzIsImV4cCI6MjA0ODk3MDAzMn0.06AltBJ-YpusPcHP7x0zhs7VQ0Ew5bGvDLgECKwJIHU",
+    },
+}
+).then((res) => res.json());
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
-
-const options = {
-  headers: {
-    apikey:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhvZnB6a3Zob2h4dml0aG5iY2VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMzOTQwMzIsImV4cCI6MjA0ODk3MDAzMn0.06AltBJ-YpusPcHP7x0zhs7VQ0Ew5bGvDLgECKwJIHU",
-  },
-};
-
-const urlcafe = "https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten?tid=ep.cafe&order=pris"
-
-
-
+console.log(data);
 ---
 
 <Layout>
   <Header />
   <div class="forside">
-    <img
-      src="../img/montvaskbrun.png"
-      alt="tegning af montvask"
-      id="forsidepic"
-    />
+    <img src="../img/montvaskbrun.png" alt="tegning af montvask" id="forsidepic"/>
   </div>
   <Toggle />
   <h1>CAFE MENU</h1>
@@ -54,21 +46,25 @@ const urlcafe = "https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten?tid=ep.
   .forside {
     display: flex;
     justify-content: center;
+   
   }
 
   @media (max-width: 600px) {
-    img {
-      width: 50%;
-    }
+  img {
+    width: 50%;
   }
+}
 
 h1{
   text-align: center;
   color: var(--sec-color);
+  margin-top: 20%;
+  
 }
 
 h2{
   color: var(--sec-color);
+  font-family: Orator Std;
 }
   
 </style>
