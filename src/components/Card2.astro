@@ -1,0 +1,29 @@
+---
+const {data} = Astro.props;
+---
+
+<article class="grid_1-1">
+<div>
+<h2>{data.name}</h2>
+<p>{data.indhold}</p>
+</div>
+<div>
+<p>{data.pris}</p>
+</div>
+</article>
+
+
+
+<style>
+    .grid_1-1{
+        display: flex;
+        justify-content: space-between;
+        margin: 2%;
+
+    }
+
+    h2{
+        font-family: Orator Std;
+    }
+</style>
+

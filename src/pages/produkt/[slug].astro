@@ -1,0 +1,16 @@
+---
+//@ts-nocheck
+export async function getStaticPaths() {
+    const url = "https://xofpzkvhohxvithnbcek.supabase.co/rest/v1/monten";
+const options = {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhvZnB6a3Zob2h4dml0aG5iY2VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMzOTQwMzIsImV4cCI6MjA0ODk3MDAzMn0.06AltBJ-YpusPcHP7x0zhs7VQ0Ew5bGvDLgECKwJIHU",
+    },
+};
+    const name = await fetch(url, options).then((res) => res.json());
+
+    
+}
+---
