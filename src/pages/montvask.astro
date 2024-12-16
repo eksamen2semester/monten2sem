@@ -31,7 +31,7 @@ import Footer from "../components/Footer.astro";
   </div>
   <h3>PRISLISTE</h3>
   <section>
-    <div class="grid_1-1">
+    <div class="prisliste">
       <div class="col2">
         <p class="vask">VASKEMASKINE nr. 1-4: 50kr,-</p>
         <p class="info">Vaskemaskinen har plads til 7 kg</p>
@@ -115,7 +115,10 @@ import Footer from "../components/Footer.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
-    align-items:;
+  }
+
+  .prisliste {
+    display: flex;
   }
 
   /* p er kun brugt i info boksen */
@@ -147,23 +150,29 @@ import Footer from "../components/Footer.astro";
   /* teksten til vaskemaskinen */
   .vask {
     font-size: 180%;
-    place-self: center;
+    /* place-self: center; */
     line-height: 2ch;
     margin-top: 10%;
     color: #340000;
-    padding-left: 20%;
+    /* padding-left: 20%; */
+    display: flex;
+    justify-content: center;
   }
 
   /* info er hvor meget vaskemaskinen kan indeholde */
   .info {
     color: #2f0002;
-    padding-left: 25.5%;
+    /* padding-left: 25.5%; */
+    display: flex;
+    justify-content: center;
   }
 
   /* info er hvor meget vaskemaskinen kan indeholde */
   .info2 {
     color: #2f0002;
-    padding-left: 27%;
+    /* padding-left: 27%; */
+    display: flex;
+    justify-content: center;
   }
 
   /* reservationsknappen  */
@@ -177,12 +186,6 @@ import Footer from "../components/Footer.astro";
     color: #340000;
   }
 
-  /* den mørkebrune boks omkring info */
-  .col1 {
-    background-color: #340000;
-    border-radius: 3%;
-  }
-
   /* placeringen af vaskemaine teksten */
   .col2 {
     padding-right: 32%;
@@ -191,7 +194,7 @@ import Footer from "../components/Footer.astro";
   /* dropdown menuen */
   .dropdown {
     display: inline-block;
-    padding: 5% 25%;
+    place-self: center;
   }
 
   /* knappen der hedder spørgsmål */
@@ -205,18 +208,16 @@ import Footer from "../components/Footer.astro";
     text-decoration: underline;
   }
 
+  /* indholdet af dropdown boksen */
   .dropdown .content {
     display: none;
     position: relative;
     background-color: #f8f6e9;
     min-width: 65ch;
-  }
-
-  .spørgsmål {
     padding: 10%;
   }
 
-  /* h2 er info  */
+  /* h2 er info overskrift */
   h2 {
     padding-left: 47%;
     font-family: rubik-doodle;
@@ -225,7 +226,7 @@ import Footer from "../components/Footer.astro";
     margin-bottom: 2%;
   }
 
-  /* h3 er prisliste og FAQ */
+  /* h3 er prisliste og FAQ overskrift*/
   h3 {
     font-size: 300%;
     padding-left: 8.5%;
@@ -293,7 +294,8 @@ import Footer from "../components/Footer.astro";
       place-self: center;
       font-size: 150%;
       margin-top: 5%;
-      padding-left: 40%;
+      /* padding-left: 25%; */
+      place-self: center;
     }
 
     h3 {
@@ -311,7 +313,6 @@ import Footer from "../components/Footer.astro";
 
     .dropdown button {
       font-size: 150%;
-      padding-left: 30%;
       line-height: 1ch;
       text-decoration: underline;
     }
@@ -319,6 +320,10 @@ import Footer from "../components/Footer.astro";
     .dropdown .content {
       position: relative;
       display: none;
+    }
+
+    .info,
+    .info2 {
     }
   }
 
