@@ -256,6 +256,11 @@ import Footer from "../components/Footer.astro";
 
   /* Dette er vores style til mobil versionen */
   @media (max-width: 600px) {
+    .monten {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     /* Denne grid går ind og gør det til 1 fraktion frem for 2 fraktion */
     .grid_1-1 {
       display: grid;
@@ -306,7 +311,7 @@ import Footer from "../components/Footer.astro";
       font-size: 150%;
       margin-top: 5%;
       /* padding-left: 25%; */
-      place-self: center;
+      /* place-self: center; */
     }
 
     h3 {
@@ -337,12 +342,12 @@ import Footer from "../components/Footer.astro";
     .info2 {
     }
 
-    .prisliste {
+    /* .prisliste {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: baseline;
       padding: 20px;
-    }
+    } */
   }
 
   .box {
@@ -359,14 +364,14 @@ import Footer from "../components/Footer.astro";
     border-radius: 10px;
   }
 
-  @media (max-width: 800px) {
+  /* @media (max-width: 800px) {
     .monten {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-  }
-  @media (min-width: 801px) {
+  } */
+  @media (min-width: 601px) {
     .monten {
       display: flex;
       flex-direction: row;
