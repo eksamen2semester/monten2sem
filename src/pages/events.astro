@@ -11,11 +11,11 @@ import Reservation from "../components/Reservation.astro";
 <Layout>
   <Header />
   <div class="billede">
-    <img src="../img/skol.webp" alt="tegning af montvask" />
+    <img src="../img/skol2.webp" alt="tegning af montvask" />
   </div>
   <h1>EVENTS</h1>
-  <Form />
-  <h2>DET SKER PÅ MØNTEN</h2>
+  <h2>DET SKER PÅ MØNTEN</h2><Form />
+
   <div class="events">
     <div class="event">
       <Card title="QUIZ AFTEN" text="9" />
@@ -30,7 +30,7 @@ import Reservation from "../components/Reservation.astro";
             Tagensvej 77, 2200 N
           </a>
         </p>
-        <Reservation text="Læs mere" />
+        <Reservation text="book plads" />
       </div>
     </div>
     <div class="event">
@@ -46,15 +46,14 @@ import Reservation from "../components/Reservation.astro";
             Tagensvej 77, 2200 N
           </a>
         </p>
-        <Reservation text="Læs mere" />
+        <Reservation text="book plads" />
       </div>
     </div>
     <div class="event">
       <Card title="STRIK &DRIK" text="17" />
       <div>
         <p>
-          TAG DIT STRIKTØJ MED OG NYD ET KOLDT GLAS VIN DEC, 2024 kl 18.00 <br
-          />
+          TAG DIT STRIKTØJ MED OG NYD ET KOLDT GLAS VIN DEC, 2024 <br />
           <a
             href="https://www.google.com/maps?q=Tagensvej+67+2200"
             target="_blank"
@@ -63,7 +62,7 @@ import Reservation from "../components/Reservation.astro";
             Tagensvej 77, 2200 N
           </a>
         </p>
-        <Reservation text="Læs mere" />
+        <Reservation text="book plads" />
       </div>
     </div>
     <div class="event">
@@ -79,7 +78,7 @@ import Reservation from "../components/Reservation.astro";
             Tagensvej 77, 2200 N
           </a>
         </p>
-        <Reservation text="Læs mere" />
+        <Reservation text="book plads" />
       </div>
     </div>
     <div class="event">
@@ -95,15 +94,14 @@ import Reservation from "../components/Reservation.astro";
             Tagensvej 77, 2200 N
           </a>
         </p>
-        <Reservation text="Læs mere" />
+        <Reservation text="book plads" />
       </div>
     </div>
     <div class="event">
       <Card title="JULE FEST" text="23" />
       <div>
         <p>
-          JULEFEST PÅ MØNTEN, ALT OVERSKUD GÅR TIL HUS FORBI DEC, 2024 kl 17.00 <br
-          />
+          JULEFEST PÅ MØNTEN, ALT OVERSKUD GÅR TIL HUS FORBI DEC, 2024 <br />
           <a
             href="https://www.google.com/maps?q=Tagensvej+67+2200"
             target="_blank"
@@ -112,7 +110,7 @@ import Reservation from "../components/Reservation.astro";
             Tagensvej 77, 2200 N
           </a>
         </p>
-        <Reservation text="Læs mere" />
+        <Reservation text="book plads" />
       </div>
     </div>
   </div>
@@ -121,7 +119,8 @@ import Reservation from "../components/Reservation.astro";
 
 <style>
   img {
-    max-width: 60%;
+    max-width: 100%;
+    height: auto;
   }
   .billede {
     display: flex;
@@ -132,15 +131,21 @@ import Reservation from "../components/Reservation.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
-    align-items: baseline;
+    align-items: stretch;
+    margin: 30px 10px;
   }
 
   h1 {
     place-self: center;
     color: rgba(255, 2, 10, 1);
+    margin-bottom: 20vh;
   }
   p {
     color: #2f0002;
+    min-width: 20ch;
+  }
+  a {
+    font-weight: bolder;
   }
 
   @media (min-width: 801px) {
