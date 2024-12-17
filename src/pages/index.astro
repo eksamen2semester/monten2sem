@@ -89,18 +89,20 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
       <h2>Vin</h2>
       {filteredDataVin.map((item) => <Card2 data={item} />)}
     </div>
+    <div class="grid_1-1">
+    <div class="bar">
+      <h2>Øl på fad</h2>
+      {filteredDataFadØl.map((item) => <Card2 data={item} />)}
+    </div>
+    <div class="bar">
+      <h2>Øl</h2>
+      {filteredDataØl.map((item) => <Card2 data={item} />)}
+    </div>
+  </div>
     <div class="bar">
       <h2>Drinks</h2>
       {filteredDataDrinks.map((item) => <Card2 data={item} />)}
     </div>
-    <div class="bar">
-    <h2>Øl på fad</h2>
-    {filteredDataFadØl.map((item) => <Card2 data={item} />)}
-  </div>
-  <div class="bar">
-    <h2>Øl</h2>
-    {filteredDataØl.map((item) => <Card2 data={item} />)}
-  </div>
   <div class="happyhour">
     <h2>HAPPYHOUR</h2>
     <p> TORS - LØR KL 16 - 22</p>
@@ -142,8 +144,8 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
   }
 
 .menu{
-  margin-right: 17%;
-  margin-left: 17%;
+  margin-right: 25%;
+  margin-left: 25%;
 }
 
 .grid_1-1{
@@ -153,11 +155,12 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
 
 .happyhour{
   border: solid var(--sec-color);
-  max-width: 700px;
+  max-width: 550px;
   text-align: center;
-  height: 120px;
+  height: fit-content;
   padding-top: 10px;
-  margin: 30px;
+  margin: 0 auto;
+
 }
 
 p{
@@ -166,8 +169,12 @@ p{
 
 .bar{
   color: rgba(248, 246, 233, 1);
+  padding: 20px
 }
 
+.cafe{
+  padding: 20px
+}
 
 
 </style>

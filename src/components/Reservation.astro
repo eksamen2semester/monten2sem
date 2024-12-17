@@ -13,7 +13,7 @@ const text = Astro.props.text;
   button {
     font-family: "Orator Std";
     color: #f8f6e9;
-    background-color: #ff0009;
+    background-color: var(--sec-color);
     border-radius: 50px;
     border: none;
     padding: 7px 20px;
@@ -28,6 +28,7 @@ const text = Astro.props.text;
 
   p {
     font-size: 17px;
+    color: var(--primary-color);
   }
 
   button:hover {
