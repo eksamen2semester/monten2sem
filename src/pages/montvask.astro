@@ -19,8 +19,9 @@ import Footer from "../components/Footer.astro";
     <div class="box">
       <p>
         Dit samlingspunkt for kaffe, vin og samvær <br />
-        Mønten er en charmerende kaffe- og vinbar på Nørrebro. Vi serverer et udvalg af små retter, brunch og varme måltider, alt sammen med kærlighed til råvarernes oprindelse. Kom indenfor og mærk fællesskabet
-        i vores hyggelige rammer
+        Mønten er en charmerende kaffe- og vinbar på Nørrebro. Vi serverer et udvalg
+        af små retter, brunch og varme måltider, alt sammen med kærlighed til råvarernes
+        oprindelse. Kom indenfor og mærk fællesskabet i vores hyggelige rammer
       </p>
     </div>
     <img class="image" src="../img/cafedame.webp" alt="barista kvinde" />
@@ -56,37 +57,47 @@ import Footer from "../components/Footer.astro";
   <h3>FAQ</h3>
   <section>
     <div class="grid_1-1">
-      <div class="dropdown">
-        <button>spørgsmål +</button>
-        <div class="content">
+      <div class="dropdown1">
+        <button id="knap"
+          >Er det muligt at få hjælp hvis jeg har problemer med en maskine?</button
+        >
+        <div class="content1">
           <p class="spørgsmål">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
-            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+            Der ligger vejledninger tilgængeligt ved alle maskinerne. Skulle du
+            have yderlige problemer er du velkommen til at spørge i Cafeen.
           </p>
         </div>
       </div>
       <div class="dropdown">
-        <button id="knap1">spørgsmål +</button>
+        <button id="knap1"
+          >Hvad skal jeg gøre hvis jeg har glemt noget i en maskine?</button
+        >
         <div class="content">
           <p class="spørgsmål">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
-            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+            Hvis uheldet er ude og du har glemt noget i en maskine skal du
+            kontakte os hurtigt muligt, og beskrive genstanden du har glemt. Vi
+            vil gøre vores bedste for at finde din genstand og ligge den til
+            afhentning i cafeen
           </p>
         </div>
-      </div><div class="dropdown">
-        <button id="knap2">spørgsmål +</button>
-        <div class="content">
+      </div><div class="dropdown2">
+        <button id="knap2">Hvilke typer sæbe tilbydes?</button>
+        <div class="content2">
           <p class="spørgsmål">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
-            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+            Vi tilbyder sæbe til hvid, farvet og sort tøj. Derudover har vi
+            special sæber til fx. uld, silke og dun. Alle vores sæber er i
+            øvrigt neutrale og svanemærkede, for at passe bedst muligt på
+            miljøet
           </p>
         </div>
-      </div><div class="dropdown">
-        <button id="knap3">spørgsmål +</button>
-        <div class="content">
+      </div><div class="dropdown3">
+        <button id="knap3"
+          >Kan man vaske tæpper eller dyner i jeres maskiner?</button
+        >
+        <div class="content3">
           <p class="spørgsmål">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos beatae nobis rem inventore sapiente, perferendis accusantium consequuntur tempore ea obcaecati modi mollitia
-            assumenda at error. Veniam nulla minus soluta, vitae voluptatum, modi eos est ad sint iste repellendus accusamus?
+            Ja, vi har store maskiner hvori du kan vaske dine dyner og tæpper.
+            Du kan slet booke en stor maskine.
           </p>
         </div>
       </div>
@@ -116,7 +127,9 @@ import Footer from "../components/Footer.astro";
     grid-template-columns: 1fr 1fr;
     gap: 1em;
   }
-
+  button {
+    text-align: left;
+  }
   /* p er kun brugt i info boksen */
   p {
     max-width: 65ch;
@@ -178,34 +191,49 @@ import Footer from "../components/Footer.astro";
   /* farven på teksten til dropdown */
   .spørgsmål {
     color: #340000;
-    margin-left: 12%;
+    /* margin-left: 12%; */
   }
 
   /* dropdown menuen */
-  .dropdown {
-    display: inline-block;
-    margin-left: 15%;
-    margin-top: 10%;
+  .dropdown,
+  .dropdown1,
+  .dropdown2,
+  .dropdown3 {
+    display: block;
+    margin-left: 15px;
   }
 
   /* knappen der hedder spørgsmål */
-  .dropdown button {
+
+  #knap,
+  #knap1,
+  #knap2,
+  #knap3 {
     background-color: #f8f6e9;
     color: #340000;
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
     border: none;
     cursor: pointer;
     font-size: 200%;
     text-decoration: underline;
+    font-family: Orator Std;
+    margin: 15px;
   }
 
-  /* indholdet af dropdown boksen */
-  .dropdown .content {
-    display: none;
-    position: relative;
+  .content,
+  .content1,
+  .content2,
+  .content3 {
+    /* display: none;
+    position: relative; */
     background-color: #f8f6e9;
     min-width: 65ch;
     /* padding: 10%; */
+    margin: 15px;
+  }
+
+  section {
+    margin: 15px;
   }
 
   /* h2 er info overskrift */
@@ -246,7 +274,6 @@ import Footer from "../components/Footer.astro";
       display: grid;
       grid-template-columns: 1fr;
       gap: 1em;
-      place-self: center;
     }
 
     h1 {
@@ -287,12 +314,8 @@ import Footer from "../components/Footer.astro";
     }
 
     .vask {
-      /* line-height: 5ch; */
       place-self: center;
       font-size: 150%;
-      /* margin-top: 5%; */
-      /* padding-left: 25%; */
-      /* place-self: center; */
     }
 
     h3 {
@@ -308,32 +331,11 @@ import Footer from "../components/Footer.astro";
       margin-top: 5%;
     }
 
-    /* Spørgsmålene i FAQ */
-    .dropdown button {
-      font-size: 150%;
-      line-height: 1ch;
-      text-decoration: underline;
-      /* place-self: center; */
-    }
-
-    .dropdown .content {
-      position: relative;
-      display: none;
-      place-self: center;
-    }
-
     .info,
     .info2 {
       place-self: center;
       margin-top: -5%;
     }
-
-    /* .prisliste {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: baseline;
-      padding: 20px;
-    } */
   }
 
   .box {
