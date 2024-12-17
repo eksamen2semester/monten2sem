@@ -25,6 +25,8 @@ console.log(data);
 // her henter jeg den filterede data på baggrund af navnet det hedder type fordi det hedder vores kolonne
 const filteredDataØl = data.filter((item) => item.type === "øl");
 
+const filteredDataFadØl = data.filter((item) => item.type === "fadøl");
+
 const filteredDataVin = data.filter((item) => item.type === "vin");
 
 const filteredDataDrinks = data.filter((item) => item.type === "drink");
@@ -32,6 +34,11 @@ const filteredDataDrinks = data.filter((item) => item.type === "drink");
 const filteredDataVarm = data.filter((item) => item.type === "varm");
 
 const filteredDataMorgen = data.filter((item) => item.type === "morgen");
+
+const filteredDataFrokost = data.filter((item) => item.type === "frokost");
+
+const filteredDataKold = data.filter((item) => item.type === "kold");
+
 ---
 
 <Layout>
@@ -45,32 +52,60 @@ const filteredDataMorgen = data.filter((item) => item.type === "morgen");
   </div>
   <Toggle />
   <!-- her hentes alt
-  <h1>CAFE MENU</h1>
+  
   <div>
     <h2>MORGENMAD (9-15:30)</h2>
     {data.map((item) => <Card2 data={item} />)}
   </div> -->
-  <div>
+  <h1>CAFE MENU</h1>
+  <section class="menu">
+    
     <!-- Her henter vi alt på baggrund af  katetegori og får det vist i browseren-->
+    <section class="light">
+    <div class="cafe">
+      <h2>Morgenmad</h2>
+      {filteredDataMorgen.map((item) => <Card2 data={item} />)}
+    </div>
+    <div class="cafe">
+      <h2>Frokost</h2>
+      {filteredDataFrokost.map((item) => <Card2 data={item} />)}
+    </div>
+    <div class="grid_1-1">
+    <div class="cafe">
+      <h2>Varme drikke</h2>
+      {filteredDataVarm.map((item) => <Card2 data={item} />)}
+    </div>
+    <div class="cafe">
+      <h2>Kolde drikke</h2>
+      {filteredDataKold.map((item) => <Card2 data={item} />)}
+    </div>
+  </div>
+</section>
+<section class="dark">
+    <div class="bar">
+      <h2>Vin</h2>
+      {filteredDataVin.map((item) => <Card2 data={item} />)}
+    </div>
+    <div class="bar">
+      <h2>Drinks</h2>
+      {filteredDataDrinks.map((item) => <Card2 data={item} />)}
+    </div>
+    <div class="bar">
+    <h2>Øl på fad</h2>
+    {filteredDataFadØl.map((item) => <Card2 data={item} />)}
+  </div>
+  <div class="bar">
     <h2>Øl</h2>
     {filteredDataØl.map((item) => <Card2 data={item} />)}
   </div>
-  <div>
-    <h2>Vin</h2>
-    {filteredDataVin.map((item) => <Card2 data={item} />)}
+  <div class="happyhour">
+    <h2>HAPPYHOUR</h2>
+    <p> TORS - LØR KL 16 - 22</p>
+    <p> 2x DRINKS / 2X TUBORG CLASSIC</p>
+    <p> 99,-</p>
   </div>
-  <div>
-    <h2>Drinks</h2>
-    {filteredDataDrinks.map((item) => <Card2 data={item} />)}
-  </div>
-  <div>
-    <h2>Varme drikke</h2>
-    {filteredDataVarm.map((item) => <Card2 data={item} />)}
-  </div>
-  <div>
-    <h2>Morgenmad</h2>
-    {filteredDataMorgen.map((item) => <Card2 data={item} />)}
-  </div>
+</section>
+</section>
 </Layout>
 <Footer />
 
@@ -94,11 +129,43 @@ const filteredDataMorgen = data.filter((item) => item.type === "morgen");
   h1 {
     text-align: center;
     color: var(--sec-color);
-    margin-top: 20%;
+    margin-top: 7%;
   }
 
   h2 {
     color: var(--sec-color);
     font-family: Orator Std;
+    font-size: 20px;
   }
+
+.menu{
+  margin-right: 17%;
+  margin-left: 17%;
+}
+
+.grid_1-1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.happyhour{
+  border: solid var(--sec-color);
+  max-width: 700px;
+  text-align: center;
+  height: 120px;
+  padding-top: 10px;
+
+}
+
+p{
+  color: var(--sec-color);
+}
+
+
 </style>
+
+<script>
+
+
+
+</script>
