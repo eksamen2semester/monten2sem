@@ -74,16 +74,21 @@ toggle.onclick = function(){
         document.querySelector(".dark").style.display="none"
         document.querySelector(".light").style.display="block"
     }
+
+    
+    //JAVASCRIPT TIL AT SKIFTE LOGO UD NÅR DARKMODE ER AKTIVT
+    if(document.body.classList.contains("dark-theme")){
+        logo.src = "img/montenlogo_ny.webp"; 
+    } else {
+        logo.src = "img/logo.webp";
+    }
     
 }
 
 toggle!.addEventListener("click", () => toggle!.classList.toggle("active"));
-//JAVASCRIPT TIL AT SKIFTE LOGO UD NÅR DARKMODE ER AKTIVT
-// if(document.body.classList.contains("dark-theme")){
-//     logo.src = "img/montenlogo_hvid.png";
-// }else{
-//     logo.src = "img/logo.png";
-// }
+
+
+
 
 
 </script>

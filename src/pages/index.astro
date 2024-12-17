@@ -39,6 +39,9 @@ const filteredDataFrokost = data.filter((item) => item.type === "frokost");
 
 const filteredDataKold = data.filter((item) => item.type === "kold");
 
+
+
+
 ---
 
 <Layout>
@@ -57,11 +60,11 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
     <h2>MORGENMAD (9-15:30)</h2>
     {data.map((item) => <Card2 data={item} />)}
   </div> -->
-  <h1>CAFE MENU</h1>
   <section class="menu">
     
     <!-- Her henter vi alt på baggrund af  katetegori og får det vist i browseren-->
     <section class="light">
+      <h1>CAFE MENU</h1>
     <div class="cafe">
       <h2>Morgenmad</h2>
       {filteredDataMorgen.map((item) => <Card2 data={item} />)}
@@ -82,6 +85,7 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
   </div>
 </section>
 <section class="dark">
+  <h1>BAR MENU</h1>
     <div class="bar">
       <h2>Vin</h2>
       {filteredDataVin.map((item) => <Card2 data={item} />)}
