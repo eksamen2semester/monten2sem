@@ -12,11 +12,12 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+
 }
 
 .toggle-text {
-    font-size: 16px;
-    font-style: italic;
+    font-size: 30px;
+    font-family: orator std;
     color: var(--sec-color);
 }
 
@@ -26,8 +27,10 @@
     height: 45px;
     width: 100px;
     border-radius: 100px;
-    background-color: var(--third-color);
+    color: var(--primary-color);
     cursor: pointer;
+    border: 2px solid var(--sec-color);
+    
    
 }
 
@@ -45,7 +48,7 @@
 }
 
 .toggle.active::before{
-    background-color: var(--primary-color);
+    background-color: var(--sec-color);
     left: calc(100% - 38px - 7px);
 }
 
