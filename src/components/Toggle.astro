@@ -64,6 +64,9 @@ var logo = document.getElementById("logo");
 toggle.onclick = function() {
     document.body.classList.toggle("dark-theme");
 
+    //her bruges funktionen til at skifte forsidebilledet ud, afhængigt af temaet
+    //herunder bliver if-statement også brugt til at skifte menuen ud, afhængigt af
+
     if(document.body.classList.contains("dark-theme")) {
         forsidepic.src = "img/montvaskbeige.webp";
         document.querySelector(".light").style.display="none"
