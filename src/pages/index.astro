@@ -125,10 +125,32 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
     justify-content: center;
   }
 
-  @media (max-width: 600px) {
+  @media (min-width: 1000px) {
     img {
       width: 50%;
     }
+
+    .grid_1-1{
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+}
+.menu{
+  margin-right: 20%;
+  margin-left: 20%;
+}
+  }
+
+  @media (max-width: 999px){
+    .menu{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+h1{
+  font-size:7vh ;
+}
+
   }
 
   h1 {
@@ -143,15 +165,9 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
     font-size: 20px;
   }
 
-.menu{
-  margin-right: 25%;
-  margin-left: 25%;
-}
 
-.grid_1-1{
-  display: flex;
-  justify-content: space-between;
-}
+
+
 
 .happyhour{
   border: solid var(--sec-color);
@@ -170,11 +186,15 @@ p{
 .bar{
   color: rgba(248, 246, 233, 1);
   padding: 20px;
+  gap: 2rem;
+  
 }
 
 .cafe{
-  padding: 20px
+  gap: 3rem;
 }
+
+
 
 .dark{
   display: none;
