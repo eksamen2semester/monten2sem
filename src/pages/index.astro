@@ -62,16 +62,20 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
       <h1>CAFE MENU</h1>
       <div class="cafe">
         <h2>Morgenmad</h2>
+        <img id="fork" src="../img/fork.webp" alt="kniv og gaffel" />
         {filteredDataMorgen.map((item) => <Card2 data={item} />)}
       </div>
       <div class="cafe">
         <h2>Frokost</h2>
         {filteredDataFrokost.map((item) => <Card2 data={item} />)}
+        <img id="burger" src="../img/burger.webp" alt="burger tegning" />
+        <img id="fork2" src="../img/fork.webp" alt="gaffel tegning" />
       </div>
       <div class="grid_1-1">
         <div class="cafe">
           <h2>Varme drikke</h2>
           {filteredDataVarm.map((item) => <Card2 data={item} />)}
+          <img id="kop" src="../img/kop.webp" alt="kaffekop tegning" />
         </div>
         <div class="cafe">
           <h2>Kolde drikke</h2>
@@ -84,11 +88,14 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
       <div class="bar">
         <h2>Vin</h2>
         {filteredDataVin.map((item) => <Card2 data={item} />)}
+        <img id="vin" src="../img/vin.webp" alt="vin" />
       </div>
       <div class="grid_1-1">
         <div class="bar">
           <h2>Øl på fad</h2>
           {filteredDataFadØl.map((item) => <Card2 data={item} />)}
+
+          <img id="ol" src="../img/ol.webp" alt="øl" />
         </div>
         <div class="bar">
           <h2>Øl</h2>
@@ -112,9 +119,72 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
 
 <style>
   img {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
   }
+
+  #vin {
+    position: absolute;
+    width: 60px;
+    height: auto;
+    top: 13%;
+    left: 90%;
+    rotate: 10deg;
+    opacity: 0.8;
+  }
+
+  #ol {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 13%;
+    left: 90%;
+    rotate: 30deg;
+    opacity: 0.8;
+  }
+
+  #fork {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 6%;
+    left: 67%;
+    rotate: 30deg;
+    z-index: -2;
+    opacity: 0.5;
+  }
+
+  #fork2 {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 55%;
+    left: 67%;
+    rotate: 10deg;
+    z-index: -2;
+    opacity: 0.5;
+  }
+
+  #burger {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 15%;
+    left: 75%;
+    rotate: 30deg;
+    z-index: -2;
+    opacity: 0.5;
+  }
+  /* 
+  #kop {
+    position: absolute;
+    height: auto;
+    top: 10%;
+    left: 70%;
+    rotate: 10deg;
+    z-index: -2;
+    opacity: 0.8;
+  } */
 
   .forside {
     display: flex;
@@ -122,9 +192,9 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
   }
 
   @media (min-width: 1000px) {
-    img {
+    /* img {
       width: 50%;
-    }
+    } */
 
     .grid_1-1 {
       display: flex;
@@ -132,8 +202,18 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
       grid-template-columns: 1fr 1fr;
     }
     .menu {
-      margin-right: 20%;
-      margin-left: 20%;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+
+    #kop {
+      position: absolute;
+      height: auto;
+      top: 10%;
+      left: 80%;
+      rotate: 10deg;
+      z-index: -2;
+      opacity: 0.8;
     }
   }
 
@@ -145,6 +225,16 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
 
     h1 {
       font-size: 7vh;
+    }
+
+    #kop {
+      position: absolute;
+      height: auto;
+      top: 10%;
+      left: 50%;
+      rotate: 10deg;
+      z-index: -2;
+      opacity: 0.8;
     }
   }
 
@@ -180,6 +270,7 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
     gap: 2rem;
     margin-bottom: 25px;
     line-height: 20px;
+    position: relative;
   }
 
   .cafe {
@@ -187,6 +278,7 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
     margin-bottom: 25px;
     line-height: 20px;
     color: #2f0002;
+    position: relative;
   }
 
   .dark {
