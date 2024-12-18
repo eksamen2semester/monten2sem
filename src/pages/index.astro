@@ -38,9 +38,6 @@ const filteredDataMorgen = data.filter((item) => item.type === "morgen");
 const filteredDataFrokost = data.filter((item) => item.type === "frokost");
 
 const filteredDataKold = data.filter((item) => item.type === "kold");
-
-
-
 ---
 
 <Layout>
@@ -60,57 +57,56 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
     {data.map((item) => <Card2 data={item} />)}
   </div> -->
   <section class="menu">
-    
     <!-- Her henter vi alt på baggrund af  katetegori og får det vist i browseren-->
     <section class="light">
       <h1>CAFE MENU</h1>
-    <div class="cafe">
-      <h2>Morgenmad</h2>
-      {filteredDataMorgen.map((item) => <Card2 data={item} />)}
-    </div>
-    <div class="cafe">
-      <h2>Frokost</h2>
-      {filteredDataFrokost.map((item) => <Card2 data={item} />)}
-    </div>
-    <div class="grid_1-1">
-    <div class="cafe">
-      <h2>Varme drikke</h2>
-      {filteredDataVarm.map((item) => <Card2 data={item} />)}
-    </div>
-    <div class="cafe">
-      <h2>Kolde drikke</h2>
-      {filteredDataKold.map((item) => <Card2 data={item} />)}
-    </div>
-  </div>
-</section>
-<section class="dark">
-  <h1>BAR MENU</h1>
-    <div class="bar">
-      <h2>Vin</h2>
-      {filteredDataVin.map((item) => <Card2 data={item} />)}
-    </div>
-    <div class="grid_1-1">
-    <div class="bar">
-      <h2>Øl på fad</h2>
-      {filteredDataFadØl.map((item) => <Card2 data={item} />)}
-    </div>
-    <div class="bar">
-      <h2>Øl</h2>
-      {filteredDataØl.map((item) => <Card2 data={item} />)}
-    </div>
-  </div>
-    <div class="bar">
-      <h2>Drinks</h2>
-      {filteredDataDrinks.map((item) => <Card2 data={item} />)}
-    </div>
-  <div class="happyhour">
-    <h2>HAPPYHOUR</h2>
-    <p> TORS - LØR KL 16 - 22</p>
-    <p> 2x DRINKS / 2X TUBORG CLASSIC</p>
-    <p> 99,-</p>
-  </div>
-</section>
-</section>
+      <div class="cafe">
+        <h2>Morgenmad</h2>
+        {filteredDataMorgen.map((item) => <Card2 data={item} />)}
+      </div>
+      <div class="cafe">
+        <h2>Frokost</h2>
+        {filteredDataFrokost.map((item) => <Card2 data={item} />)}
+      </div>
+      <div class="grid_1-1">
+        <div class="cafe">
+          <h2>Varme drikke</h2>
+          {filteredDataVarm.map((item) => <Card2 data={item} />)}
+        </div>
+        <div class="cafe">
+          <h2>Kolde drikke</h2>
+          {filteredDataKold.map((item) => <Card2 data={item} />)}
+        </div>
+      </div>
+    </section>
+    <section class="dark">
+      <h1>BAR MENU</h1>
+      <div class="bar">
+        <h2>Vin</h2>
+        {filteredDataVin.map((item) => <Card2 data={item} />)}
+      </div>
+      <div class="grid_1-1">
+        <div class="bar">
+          <h2>Øl på fad</h2>
+          {filteredDataFadØl.map((item) => <Card2 data={item} />)}
+        </div>
+        <div class="bar">
+          <h2>Øl</h2>
+          {filteredDataØl.map((item) => <Card2 data={item} />)}
+        </div>
+      </div>
+      <div class="bar">
+        <h2>Drinks</h2>
+        {filteredDataDrinks.map((item) => <Card2 data={item} />)}
+      </div>
+      <div class="happyhour">
+        <h2>HAPPYHOUR</h2>
+        <p>TORS - LØR KL 16 - 22</p>
+        <p>2x DRINKS / 2X TUBORG CLASSIC</p>
+        <p>99,-</p>
+      </div>
+    </section>
+  </section>
 </Layout>
 <Footer />
 
@@ -130,76 +126,70 @@ const filteredDataKold = data.filter((item) => item.type === "kold");
       width: 50%;
     }
 
-    .grid_1-1{
-  display: flex;
-  justify-content: space-between;
-  grid-template-columns: 1fr 1fr;
-}
-.menu{
-  margin-right: 20%;
-  margin-left: 20%;
-}
+    .grid_1-1 {
+      display: flex;
+      justify-content: space-between;
+      grid-template-columns: 1fr 1fr;
+    }
+    .menu {
+      margin-right: 20%;
+      margin-left: 20%;
+    }
   }
 
-  @media (max-width: 999px){
-    .menu{
-  margin-right: 10%;
-  margin-left: 10%;
-}
+  @media (max-width: 999px) {
+    .menu {
+      margin-right: 10%;
+      margin-left: 10%;
+    }
 
-h1{
-  font-size:7vh ;
-}
-
+    h1 {
+      font-size: 7vh;
+    }
   }
 
   h1 {
     text-align: center;
     color: var(--sec-color);
     margin-top: 7%;
+    margin-bottom: 7%;
   }
 
   h2 {
     color: var(--sec-color);
     font-family: Orator Std;
-    font-size: 20px;
+    font-size: 22px;
   }
 
+  .happyhour {
+    border: solid var(--sec-color);
+    max-width: 550px;
+    text-align: center;
+    height: fit-content;
+    padding-top: 10px;
+    margin: 0 auto;
+  }
 
+  p {
+    color: var(--sec-color);
+  }
 
+  .bar {
+    color: rgba(248, 246, 233, 1);
+    padding: 20px;
+    gap: 2rem;
+    margin-bottom: 25px;
+    line-height: 20px;
+  }
 
+  .cafe {
+    gap: 3rem;
+    margin-bottom: 25px;
+    line-height: 20px;
+    color: #2f0002;
+  }
 
-.happyhour{
-  border: solid var(--sec-color);
-  max-width: 550px;
-  text-align: center;
-  height: fit-content;
-  padding-top: 10px;
-  margin: 0 auto;
-
-}
-
-p{
-  color: var(--sec-color);
-}
-
-.bar{
-  color: rgba(248, 246, 233, 1);
-  padding: 20px;
-  gap: 2rem;
-  
-}
-
-.cafe{
-  gap: 3rem;
-}
-
-
-
-.dark{
-  display: none;
-}
-
-
+  .dark {
+    display: none;
+  }
 </style>
-
