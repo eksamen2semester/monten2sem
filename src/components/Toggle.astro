@@ -55,6 +55,7 @@
 </style>
 
 <script>
+//@ts-nocheck
 const toggle = document.querySelector(".toggle");
 var forsidepic = document.getElementById("forsidepic");
 var logo = document.getElementById("logo");
@@ -89,7 +90,7 @@ toggle.onclick = function() {
 };
 
 
-toggle!.addEventListener("click", () => toggle!.classList.toggle("active"));
+toggle.addEventListener("click", () => toggle.classList.toggle("active"));
 
 
 
